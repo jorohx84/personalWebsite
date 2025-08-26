@@ -1,0 +1,145 @@
+.heroSection {
+    width: 100%;
+    height: calc(100vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: fit-content;
+
+}
+
+.title {
+    height: calc(100% - clamp(80px, 10vw, 200px));
+    min-width: clamp(320px, 50vw, 1000px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    margin-top: clamp(80px, 10vw, 200px);
+    position: relative;
+
+    >p {
+        font-size: clamp(1.3rem, 2vw, 2.8rem);
+        font-weight: 500;
+    }
+}
+
+.word {
+    display: flex;
+
+    >div {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >span {
+            font-size: clamp(2.8rem, 7.5vw, 9.5rem);
+            font-weight: 650;
+            color: var(--main);
+            transition: transform 0.2s ease-in-out;
+
+            &:hover {
+                color: var(--button);
+
+            }
+        }
+    }
+
+}
+
+.portrait {
+    width: 41%;
+    border-radius: 70% 50% 70% 50%;
+    transition: border-radius 1s ease-in-out;
+    background-color: var(--back);
+
+    &:hover {
+
+        //   border-radius: 50% 90%  50% 90%;
+        border-radius: 50% 70% 50% 70%;
+    }
+}
+
+.margin {
+    margin-top: clamp(-30px, calc(0px - 3vw), -10px);
+    padding-left: clamp(00px, 5vw, 100px);
+}
+
+.btnContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 56px;
+    padding-right: 50px;
+}
+
+.links {
+    position: absolute;
+    bottom: 56px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+
+    >a {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--back);
+        border-radius: 10px;
+
+        >img {
+            width: 30px;
+        }
+
+    }
+}
+
+
+@media(max-width: 1000px) {
+    .heroSection {
+        justify-content: center;
+
+    }
+
+    .portrait {
+        display: none;
+    }
+
+    .title {
+        align-items: center;
+
+    }
+
+    .btnContainer {
+        justify-content: center;
+        padding-right: unset;
+    }
+
+    .links {
+        width: 100%;
+        bottom: 16px;
+    }
+}
+
+@media(max-width: 750px) {
+    .heroSection {
+        height: calc(100vh - 80px);
+    }
+
+    .links {
+        >a {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+
+            >img {
+                width: 20px
+            }
+        }
+    }
+}
