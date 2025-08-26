@@ -15,7 +15,7 @@
     flex-direction: column;
     align-items: flex-start;
 
-    margin-top: clamp(80px, 10vw, 200px);
+    margin-top: clamp(40px, 10vw, 200px);
     position: relative;
 
     >p {
@@ -53,6 +53,7 @@
     border-radius: 70% 50% 70% 50%;
     transition: border-radius 1s ease-in-out;
     background-color: var(--back);
+    margin-top: clamp(0px, calc(400px - 20vw), 80px);
 
     &:hover {
 
@@ -100,24 +101,31 @@
 }
 
 
-@media(max-width: 1000px) {
+@media(max-width: 1050px) {
     .heroSection {
-        justify-content: center;
-
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        gap: clamp(32px, 8vw, 96px)
     }
 
     .portrait {
-        display: none;
+        width: 50%;
+        margin-top: 0;
+        border-radius: 20px;
     }
 
     .title {
         align-items: center;
-
+        position: unset;
+        height: fit-content;
     }
 
     .btnContainer {
-        justify-content: center;
-        padding-right: unset;
+        // justify-content: center;
+        // padding-right: unset;
+        // margin-top: 20px;
+        display: none;
     }
 
     .links {

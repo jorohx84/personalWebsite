@@ -4,6 +4,8 @@
     --main: #04729f;
     --button: #022f40;
     --back: rgba(0, 0, 0, 0.067);
+    --shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+    --transparent: rgba(255, 255, 255, 0.697)
 }
 
 @font-face {
@@ -22,12 +24,16 @@
     font-display: swap;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     color: var(--font);
     font-weight: 250;
     font-family: 'Inter';
-   
+
 }
 
 section,
@@ -38,10 +44,35 @@ div {
 a {
     text-decoration: none;
     color: var(--font);
+    font-size: 1.2rem;
+    font-weight: 400;
+    transition: color 0.15s ease-in-out;
+
+    &:hover {
+        color: var(--main);
+    }
 }
+
 
 p {
     margin: 0;
+}
+
+h1 {
+    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-weight: 500;
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-weight: 300;
+}
+
+h3 {
+    margin: 0;
+    font-size: clamp(1.2rem, 4vw, 1.4rem);
 }
 
 button {
@@ -89,6 +120,10 @@ button {
     padding-right: clamp(16px, calc(6vw - 7.5px), 120px);
 }
 
+.screenMargin {
+    margin-top: clamp(112px, 8vw, 172px); //global machen!!!!
+}
+
 .placeholder {
     width: 100%;
     height: 100px;
@@ -102,6 +137,8 @@ button {
     justify-content: space-between;
     align-items: center;
 }
+
+
 
 
 

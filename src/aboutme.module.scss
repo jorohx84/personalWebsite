@@ -1,0 +1,122 @@
+.aboutmeSection {
+    width: 100%;
+min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}
+
+.textContainer {
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.subContent {
+    width: 100%;
+    display: flex;
+    // flex-direction: column;
+    justify-content: flex-start;
+    gap: clamp(112px, 8vw, 112px);
+
+}
+
+.softskills {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+.softskillsCard {
+    width: 100%;
+
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px;
+    box-sizing: border-box;
+    box-shadow: var(--shadow);
+    border-radius: 10px;
+    transform: scale(0.8);
+    transition: transform 0.8s ease-in-out;
+
+
+}
+
+.scaleCard {
+    transform: scale(1);
+}
+
+.softskillsCardTitle {
+    display: flex;
+    gap: 16px;
+    align-items: flex-end;
+
+    >img {
+        width: 60px;
+        box-shadow: var(--shadow);
+        border-radius: 4px;
+        box-sizing: border-box;
+        padding: 12px;
+    }
+}
+
+@media(max-width:1880px) {
+    .subContent {
+        flex-direction: column;
+    }
+
+    .softskills {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .softskillsCard {
+        height: 260px;
+    }
+}
+
+@media(max-width:1880px) {
+    .softskillsCard {
+        height: 280px;
+    }
+}
+
+@media(max-width:1360px) {
+    // .content {
+    //     align-items: center;
+    // }
+
+    .softskills {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 1000px) {}
+
+@media(max-width: 850px) {
+    .softskills {
+        grid-template-columns: repeat(1, 1fr);
+        width: fit-content;
+    }
+
+    .softskillsCard {
+        max-width: 480px;
+    }
+
+    .subContent {
+        align-items: center;
+    }
+}
