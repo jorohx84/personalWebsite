@@ -1,0 +1,41 @@
+.transContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.regulator {
+    width: 30px;
+    height: 12px;
+    border: solid var(--button);
+    border-radius: 100px;
+    position: relative;
+
+    >div {
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+        background-color: var(--main);
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -5px;
+        transition: left 0.5s ease-in-out, right 0.5s ease-in-out;
+    }
+}
+
+.moveRight{
+    left: calc(100% - 15px)!important;
+    right: -5px !important;
+}
+
+.langBtn{
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 100px;
+    transition: background-color 0.3s ease-in-out;
+    &:hover{
+        background-color: var(--back);
+    }
+}

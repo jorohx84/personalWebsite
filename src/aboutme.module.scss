@@ -1,14 +1,16 @@
 .aboutmeSection {
     width: 100%;
-min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
     align-items: center;
-
+justify-content: space-between;
+gap: 112px;
 }
 
 .content {
     width: 100%;
+
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -20,7 +22,18 @@ min-height: calc(100vh - 100px);
     max-width: 700px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 32px;
+
+}
+
+.aboutText {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    // margin-bottom: 56px;
 }
 
 .subContent {
@@ -30,6 +43,15 @@ min-height: calc(100vh - 100px);
     justify-content: flex-start;
     gap: clamp(112px, 8vw, 112px);
 
+}
+
+.btnContainer {
+    width: 100%;
+
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .softskills {
@@ -42,7 +64,7 @@ min-height: calc(100vh - 100px);
 .softskillsCard {
     width: 100%;
 
-    height: 240px;
+    height: clamp(240px, calc(600px - 20vw), 330px);
     display: flex;
     flex-direction: column;
     gap: 32px;
@@ -50,7 +72,7 @@ min-height: calc(100vh - 100px);
     box-sizing: border-box;
     box-shadow: var(--shadow);
     border-radius: 10px;
-    transform: scale(0.8);
+    transform: scale(0.92);
     transition: transform 0.8s ease-in-out;
 
 
@@ -74,6 +96,38 @@ min-height: calc(100vh - 100px);
     }
 }
 
+.divider{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.leftLine {
+    width: 5%;
+    height: 1px;
+    border-radius: 100px;
+    background-color: var(--button);
+}
+
+.dot {
+    min-width: 3px;
+    min-height: 3px;
+    border-radius: 100px;
+    background-color: var(--button);
+}
+
+.rightLine {
+    width: 100%;
+    height: 1px;
+    border-radius: 100px;
+    background-color: var(--button);
+}
+
+
 @media(max-width:1880px) {
     .subContent {
         flex-direction: column;
@@ -83,21 +137,42 @@ min-height: calc(100vh - 100px);
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .softskillsCard {
-        height: 260px;
+    // .softskillsCard {
+    //     height: 260px;
+    // }
+
+    .textContainer {
+        flex-direction: row;
+        max-width: unset;
+        gap: 200px;
+    }
+
+    .aboutText {
+        max-width: 700px;
+    }
+
+    .btnContainer {
+        justify-content: flex-end;
+        align-items: flex-end;
     }
 }
 
-@media(max-width:1880px) {
+
+@media(max-width:1620px) {
+    .softskillsCardTitle {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
     .softskillsCard {
-        height: 280px;
+       
     }
 }
 
 @media(max-width:1360px) {
-    // .content {
-    //     align-items: center;
-    // }
+    .softskillsCard {
+      
+    }
 
     .softskills {
         grid-template-columns: repeat(2, 1fr);
@@ -108,15 +183,45 @@ min-height: calc(100vh - 100px);
 
 @media(max-width: 850px) {
     .softskills {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         width: fit-content;
+    }
+
+
+
+    .subContent {
+        align-items: center;
+    }
+
+    .textContainer {
+        flex-direction: column;
+        gap: 64px;
+    }
+}
+
+@media(max-width: 700px) {
+    .btnContainer {
+        justify-content: center;
+    }
+
+    .textContainer {
+        align-items: center;
+    }
+
+    .aboutText {
+        >h2 {
+            text-align: center;
+        }
+
+    }
+
+    .softskills {
+        grid-template-columns: repeat(1, 1fr);
+
     }
 
     .softskillsCard {
         max-width: 480px;
     }
 
-    .subContent {
-        align-items: center;
-    }
 }

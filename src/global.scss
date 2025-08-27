@@ -3,7 +3,7 @@
     --white-font: white;
     --main: #04729f;
     --button: #022f40;
-    --back: rgba(0, 0, 0, 0.067);
+    --back: #EEEEEE;
     --shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
     --transparent: rgba(255, 255, 255, 0.697)
 }
@@ -33,6 +33,7 @@ body {
     color: var(--font);
     font-weight: 250;
     font-family: 'Inter';
+    // background-color: var(--button);
 
 }
 
@@ -67,12 +68,13 @@ h1 {
 h2 {
     margin: 0;
     font-size: clamp(1.2rem, 2vw, 1.6rem);
-    font-weight: 300;
+    font-weight: 400;
+    color: var(--main);
 }
 
 h3 {
     margin: 0;
-    font-size: clamp(1.2rem, 4vw, 1.4rem);
+    font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
 button {
@@ -80,7 +82,7 @@ button {
     width: 180px;
     height: 60px;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     color: var(--white-font);
     font-size: 1rem;
     cursor: pointer;
@@ -91,7 +93,7 @@ button {
     position: relative;
     width: 180px;
     height: 60px;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: var(--back);
     transition: transform 0.2s ease-in-out;
 

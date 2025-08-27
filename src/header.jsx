@@ -1,11 +1,10 @@
-import React, { useEffect } from "react";
 import styles from './header.module.scss'
 import { useState } from "react";
-
-
+import { useTranslation } from './useTranslation';
+import Regulator from './regulator';
 const Header = () => {
     const [burgerOpen, setburgerOpen] = useState(false);
-
+    const { t, lang, setLang } = useTranslation("de");
 
 
     return (
@@ -17,11 +16,11 @@ const Header = () => {
                     <a href=""><img src="./logo/logo.svg" alt="" /></a>
                 </div>
                 <nav>
-                    <a href="">Home</a>
-                    <a href="#aboutme">Über mich</a>
-                    <a href="#skills">Fähigkeiten</a>
-                    <a href="">Projekte</a>
-                    <a href="">Kontakt</a>
+                    <a href="#aboutme">{t('header.aboutme')}</a>
+                    <a href="#skills">{t('header.skills')}</a>
+                    <a href="">{t('header.projects')}</a>
+                    <a href="">{t('header.contact')}</a>
+                    <Regulator />
                 </nav>
 
 
@@ -38,11 +37,11 @@ const Header = () => {
 
             <div className={`${styles.respMenu} ${burgerOpen ? styles.slide : ''}`} onClick={() => setburgerOpen(false)}>
                 <div>
-                    <a href="">Home</a>
-                    <a href="#aboutme">Über mich</a>
-                    <a href="#skills">Fähigkeiten</a>
-                    <a href="">Projekte</a>
-                    <a href="">Kontakt</a>
+                    <a href="#aboutme">{t('header.aboutme')}</a>
+                    <a href="#skills">{t('header.skills')}</a>
+                    <a href="">{t('header.projects')}</a>
+                    <a href="">{t('header.contact')}</a>
+                    <Regulator />
                 </div>
 
             </div>

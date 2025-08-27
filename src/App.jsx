@@ -6,19 +6,22 @@ import './global.scss';
 import Header from './header';
 import Footer from './footer';
 import Main from './main';
+import { TranslationProvider } from './useTranslation';
 function App() {
   return (
-    <Router>
-      <div className='mainContent'>
-        <div className='placeholder'></div>
-        <Header />
-        <Routes>
-          <Route path='/' element={<Main />} />
-        </Routes>
-        <Footer />
-      </div>
+    <TranslationProvider>
+      <Router>
+        <div className='mainContent'>
+          <div className='placeholder'></div>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Main />} />
+          </Routes>
+          <Footer />
+        </div>
 
-    </Router>
+      </Router>
+    </TranslationProvider>
   );
 }
 
