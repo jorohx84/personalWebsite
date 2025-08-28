@@ -2,7 +2,7 @@ import React from "react";
 import styles from './skills.module.scss';
 import Headline from "./headline";
 import { useTranslation } from "./useTranslation";
-
+import Divider from "./divider";
 const Skills = () => {
     const { t } = useTranslation('de');
 
@@ -74,11 +74,33 @@ const Skills = () => {
         // },
     ];
 
+    const methods = [
+        {
+            path: '',
+            name: 'GIT',
+
+        },
+        {
+            path: '',
+            name: 'SCRUM',
+
+        },
+        {
+            path: '',
+            name: 'KANBAN',
+
+        },
+    ]
+
     return (
         <section className={styles.skillsSection} id="skills">
             <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('skills.headline')} />
+                {/* <div className={styles.skillContainer}> */}
+                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor, sunt expedita, dolorem dolorum dicta, officiis sit ut possimus sed harum praesentium.</p> */}
                 <div className={styles.skillContainer}>
+
+
                     <div className={styles.skillIconsContainer}>
 
                         <div className={styles.textContainer}>
@@ -86,15 +108,15 @@ const Skills = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea omnis natus aliquid nihil accusantium in iusto maxime, magni illo recusandae quaerat eum dolores quas qui quasi repellat velit. Repellendus, quo!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, optio ipsam quam vel commodi ad facilis animi quasi quod accusantium aliquid placeat odit mollitia eos quia voluptate ea ex saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis quidem eveniet delectus accusamus vero minima consectetur ipsa optio, nobis quos repellendus id atque, officia obcaecati labore aliquid exercitationem nam dolorem!</p>
                         </div>
 
-                        {/* <div className={styles.skillIcons}>
+                        <div className={styles.skillIcons}>
                             {skills.map((icon, index) => (
                                 <div key={index}>
-                                    <div class={styles.flipCard} id="skillIcon${index}">
-                                        <div class={styles.flipCardInner}>
-                                            <div class={styles.flipCardFront}>
+                                    <div className={styles.flipCard} id="skillIcon${index}">
+                                        <div className={styles.flipCardInner}>
+                                            <div className={styles.flipCardFront}>
                                                 <img src={icon.path} alt="" />
                                             </div>
-                                            <div class={styles.flipCardBack}>
+                                            <div className={styles.flipCardBack}>
                                                 <span>{icon.name}</span>
                                             </div>
                                         </div>
@@ -102,18 +124,97 @@ const Skills = () => {
                                 </div>
                             ))}
 
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+                    <div className={styles.skillIconsContainer}>
+
+
+
+
+
+                        {/* <div className={styles.methodContainer}>
+                            <h2>Softskills</h2>
+                            <div className={styles.methodCards}>
+                                {methods.map((method, index) => (
+                                    <div key={index}>
+                                        <div className={styles.methodCard}>
+                                            <p>{method.name}</p>
+                                        </div>
+                                    </div>
+                                ))}
+
+                            </div>
+
+
                         </div> */}
+
+
+
+
+
+
+                        <div className={styles.learningProgress}>
+                            <h2>Im currently Learning</h2>
+                            <div className={styles.learningProgressInner}>
+                                {/* Erster Ring */}
+                                <div className={styles.progressContainer}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                        <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
+                                        <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">50%</text>
+                                    </svg>
+                                    <span>Python</span>
+                                </div>
+                                {/* Zweiter Ring */}
+                                <div className={styles.progressContainer}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                        <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
+                                        <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">30%</text>
+                                    </svg>
+
+                                    <span>Django</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
 
 
 
                     </div>
 
-                    <div className={styles.stackContainer}>
-                        {/* <div className={styles.stackHeadline}>
-                            <div></div>
-                            <h3>Techstack</h3>
-                            <div></div>
-                        </div> */}
+
+
+
+                </div>
+
+
+
+                {/* <div className={styles.stackContainer}>
+                     
                         <div className={styles.skillsOverview}>
 
 
@@ -136,10 +237,12 @@ const Skills = () => {
                                 </div>
                             ))}
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> */}
 
+
+                {/* </div> */}
+            </div>
+            <Divider section="skills" left="66%" />
         </section>
 
 

@@ -2,14 +2,21 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: flex-start;
     gap: clamp(8px, 5vw, 16px);
     margin-bottom: clamp(64px, 4vw, 200px);
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
 }
 
 .underline {
-    width: 100%;
+    width: 120%;
     height: 6px;
     display: flex;
     justify-content: flex-start;
@@ -25,10 +32,15 @@
 }
 
 @media(max-width:1360px) {
-.headlineContainer{
-    align-items: center;
-}
-.underline{
-    justify-content: center;
-}
+    .headlineContainer {
+        align-items: center;
+
+        >div {
+            align-items: center;
+        }
+    }
+
+    .underline {
+        justify-content: center;
+    }
 }

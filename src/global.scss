@@ -2,7 +2,7 @@
     --font: #333333;
     --white-font: white;
     --main: #04729f;
-    --button: #022f40;
+    --dark: #022f40;
     --back: #EEEEEE;
     --shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
     --transparent: rgba(255, 255, 255, 0.697)
@@ -60,7 +60,7 @@ p {
 }
 
 h1 {
-    font-size: clamp(2.2rem, 6vw, 4.5rem);
+    font-size: clamp(2.2rem, 4vw, 4.5rem);
     font-weight: 500;
     margin: 0;
 }
@@ -77,8 +77,17 @@ h3 {
     font-size: clamp(1.2rem, 2vw, 1.4rem);
 }
 
+h4 {
+    margin: 0;
+    font-size: clamp(1.2rem, 2vw, 1.8rem);
+    font-weight: 500;
+    // padding-bottom: 6px;
+    // border-bottom: solid 1px var(--button);
+
+}
+
 button {
-    background-color: var(--button);
+    background-color: var(--dark);
     width: 180px;
     height: 60px;
     border: none;

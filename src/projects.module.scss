@@ -1,0 +1,17 @@
+.projectsSection{
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+    .content {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+
+}

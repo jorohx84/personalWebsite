@@ -2,7 +2,7 @@ import React from "react";
 import styles from './hero.module.scss'
 import { useState } from "react";
 import { useTranslation } from './useTranslation';
-
+import Divider from "./divider";
 const Hero = () => {
     const firstLetters = ['F', 'R', 'O', 'N', 'T', 'E', 'N', 'D'];
     const secondLetters = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
@@ -56,27 +56,17 @@ const Hero = () => {
                 </div>
                 <div className={styles.btnContainer}>
                     <div className="btnBack">
-                        <button onClick={()=>window.location.href='#aboutme'}>{t('hero.button')}</button>
+                        <button onClick={() => window.location.href = '#aboutme'}>{t('hero.button')}</button>
                     </div>
 
                 </div>
 
             </div>
             <img className={styles.portrait} src="./img/portrait2.webp" alt="portraitfoto" />
-
-            <div className={styles.links}>
-                <div className={styles.leftLine}></div>
-                <div className={styles.linkBox}>
-                    {/* <div className={styles.dot}></div> */}
-                    <a href="https://www.linkedin.com/in/johannes-roth-b0833334b" target="_blank"><img src="./icons/linkedin_dark.svg" alt="linkedin" /></a>
-                    {/* <div className={styles.dot}></div> */}
-                    <a href="https://github.com/jorohx84" target="_blank"><img src="./icons/github_dark.svg" alt="github" /></a>
-                    {/* <div className={styles.dot}></div> */}
-                    <a href="mailto:kontakt@johannes-roth.de"><img src="./icons/mail_dark.svg" alt="mail" /></a>
-                    {/* <div className={styles.dot}></div> */}
-                </div>
-                <div className={styles.rightLine}></div>
+            <div className={styles.divider}>
+                <Divider section="hero" />
             </div>
+
         </section>
 
     );

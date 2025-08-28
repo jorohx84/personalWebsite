@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./aboutme.module.scss";
 import Headline from "./headline";
 import { useTranslation } from './useTranslation';
-
+import Divider from "./divider";
 const Aboutme = () => {
     const [inView, setinView] = useState(false);
     const { t } = useTranslation('de');
@@ -48,12 +48,12 @@ const Aboutme = () => {
                             <p>{t('about.text')}</p>
                         </div>
 
-                        {/* <div className={styles.btnContainer}>
+                        <div className={styles.btnContainer}>
                             <div className="btnBack">
                                 <button>{t('about.button')}</button>
                             </div>
 
-                        </div> */}
+                        </div>
                     </div>
                     <div className={styles.softskills} >
                         {softskills.map((skill, index) => (
@@ -73,17 +73,7 @@ const Aboutme = () => {
                 </div>
 
             </div>
-            <div className={styles.divider}>
-                <div className={styles.leftLine}></div>
-                {/* <div className={styles.dot}></div> */}
-                   <div className={styles.btnContainer}>
-                            <div className="btnBack">
-                                <button>{t('about.button')}</button>
-                            </div>
-
-                        </div>
-                <div className={styles.rightLine}></div>
-            </div>
+            <Divider section="aboutme" left="10%" />
         </section>
     );
 }

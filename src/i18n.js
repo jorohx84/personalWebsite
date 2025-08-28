@@ -34,9 +34,12 @@ export const translations = {
             text: 'Software entwickeln ist meine Leidenschaft – als Frontend-Entwickler lebe ich es, Ideen in Code zu verwandeln und kreative, durchdachte Lösungen zu entwickeln. Ich liebe es, Probleme zu analysieren, elegante Strukturen zu schaffen und funktionierenden Code zu schreiben, der wirklich Sinn ergibt. Besonders begeistert mich die Zusammenarbeit mit anderen Entwicklern in Teams, bei der neue Ansätze entstehen und Projekte gemeinsam wachsen. Es fasziniert mich, komplexe Herausforderungen Schritt für Schritt zu lösen und dabei ständig dazuzulernen. Die Möglichkeit, meine Fähigkeiten kontinuierlich zu erweitern, motiviert mich, neue Technologien auszuprobieren, Prozesse zu optimieren und kreative Lösungen zu entwickeln, die echten Mehrwert schaffen. Programmieren ist für mich nicht nur ein Beruf, sondern eine Leidenschaft, die mich antreibt und jeden Tag inspiriert.',
 
         },
-        skills:{
-            headline:'FÄHIGKEITEN',
+        skills: {
+            headline: 'FÄHIGKEITEN',
         },
+        projects: {
+            headline: 'PROJEKTE'
+        }
     },
 
     en: {
@@ -73,9 +76,12 @@ export const translations = {
             textHeadline: 'My Passion for Software Development',
             text: 'Software development is my passion – as a frontend developer, I thrive on turning ideas into code and creating thoughtful, innovative solutions. I enjoy analyzing problems, building elegant structures, and writing functional code that truly makes sense. What excites me most is collaborating with other developers in teams, where new approaches emerge and projects grow together. I’m fascinated by tackling complex challenges step by step while continuously learning along the way. The opportunity to expand my skills, experiment with new technologies, optimize processes, and develop creative solutions that deliver real value keeps me motivated. For me, coding is not just a job – it’s a passion that drives and inspires me every day.',
         },
-        skills:{
-            headline:'SKILLS',
+        skills: {
+            headline: 'SKILLS',
 
         },
+        projects: {
+            headline: 'PROJECTS'
+        }
     }
 };

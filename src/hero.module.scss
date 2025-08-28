@@ -2,11 +2,13 @@
     width: 100%;
     min-height: calc(100vh - 100px);
     display: flex;
+
     justify-content: center;
     align-items: flex-start;
     max-width: fit-content;
     position: relative;
 }
+
 
 .title {
     height: calc(100% - clamp(80px, 10vw, 200px));
@@ -40,7 +42,7 @@
             transition: transform 0.2s ease-in-out;
 
             &:hover {
-                color: var(--button);
+                color: var(--dark);
 
             }
         }
@@ -76,84 +78,20 @@
 
 }
 
-.links {
+
+
+
+
+
+
+
+.divider {
+    position: absolute;
     width: 100%;
     position: absolute;
     bottom: 20px;
     left: 0;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
-    // gap: 16px;
-    //  >a {
-    //         min-width: 50px;
-    //         height: 50px;
-    //         display: flex;
-    //         justify-content: center;
-    //         align-items: center;
-    //         background-color: var(--back);
-    //         border-radius: 10px;
-
-    //         >img {
-    //             width: 30px;
-    //         }
-
-    //     }
-
 }
-
-.linkBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: clamp(4px, 1vw, 16px);
-    border: solid 1px var(--button);
-    padding: 4px;
-    border-radius: 10px;
-
-    >a {
-        min-width: clamp(35px, 3vw, 50px);
-        height: clamp(35px, 3vw, 50px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // background-color: var(--back);
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out;
-
-        >img {
-            width: clamp(25px, 3vw, 30px);
-            ;
-        }
-
-        &:hover {
-            transform: scale(1.1);
-        }
-    }
-}
-
-.leftLine {
-    width: 10%;
-    height: 1px;
-    border-radius: 100px;
-    background-color: var(--button);
-}
-
-.dot {
-    min-width: 3px;
-    min-height: 3px;
-    border-radius: 100px;
-    background-color: var(--button);
-}
-
-.rightLine {
-    width: 100%;
-    height: 1px;
-    border-radius: 100px;
-    background-color: var(--button);
-}
-
 
 @media(max-width: 1050px) {
     .heroSection {

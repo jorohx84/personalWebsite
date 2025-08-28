@@ -4,7 +4,7 @@ import styles from './main.module.scss';
 import Hero from "./hero";
 import Aboutme from "./aboutme";
 import Skills from "./skills";
-
+import Projects from "./projects";
 const Main = () => {
 
 
@@ -13,6 +13,8 @@ const Main = () => {
             <Hero />
             <Aboutme />
             <Skills />
+            <Projects />
+       
         </section>
 
     );
