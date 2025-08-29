@@ -19,7 +19,7 @@ const Header = () => {
                     <a href="#aboutme">{t('header.aboutme')}</a>
                     <a href="#skills">{t('header.skills')}</a>
                     <a href="#projects">{t('header.projects')}</a>
-                    <a href="">{t('header.contact')}</a>
+                    <a href="#flow">{t('header.contact')}</a>
                     <Regulator />
                 </nav>
 
@@ -40,7 +40,7 @@ const Header = () => {
                     <a href="#aboutme">{t('header.aboutme')}</a>
                     <a href="#skills">{t('header.skills')}</a>
                     <a href="#projects">{t('header.projects')}</a>
-                    <a href="">{t('header.contact')}</a>
+                    <a href="#flow">{t('header.contact')}</a>
                     <Regulator />
                 </div>
 

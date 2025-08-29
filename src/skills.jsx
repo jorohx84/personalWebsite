@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from './skills.module.scss';
 import Headline from "./headline";
 import { useTranslation } from "./useTranslation";
@@ -73,6 +73,35 @@ const Skills = () => {
         //     description: 'Konsistente UI-Erlebnisse mit Googles Designsystem – modern, zugänglich und intuitiv umgesetzt.'
         // },
     ];
+
+    const skills2 = [
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+        {},
+    ];
+
+    const [inView, setinView] = useState(false);
+    const changePosition = () => {
+        const ref = document.getElementById('flow');
+        const rect = ref.getBoundingClientRect();
+        const viewState = rect.top < window.innerHeight * 0.4 ? true : false;
+        setinView(viewState)
+
+    }
+
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', changePosition);
+        return () => {
+            window.removeEventListener('scroll', changePosition);
+        };
+    }, []);
 
     const methods = [
         {
@@ -163,7 +192,7 @@ const Skills = () => {
 
 
                         <div className={styles.learningProgress}>
-                          <div className={styles.learningProgressContainer}>
+                            <div className={styles.learningProgressContainer}>
                                 <h2>{t('skills.subHeadline')}</h2>
                                 <div className={styles.learningProgressInner}>
                                     {/* Erster Ring */}
@@ -190,21 +219,16 @@ const Skills = () => {
                             </div>
                         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
                     </div>
 
-
+                    <div className={styles.skillflowContainer} id="flow">
+                        <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>Skills</h1>
+                        {skills2.map((skills, index) => (
+                            <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
+                                <p>Hallo</p>
+                            </div>
+                        ))}
+                    </div>
 
 
                 </div>
