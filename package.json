@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "ajv": "^8.11.0",
     "sass": "^1.90.0"
   }
 }

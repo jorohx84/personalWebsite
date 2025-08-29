@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 112px;
+
 }
 
 .content {
@@ -24,17 +25,17 @@
 
 .skillContainer {
     width: 100%;
-    // max-width: 700px;
     display: flex;
-
+    flex-direction: column;
     gap: clamp(56px, 4vw, 112px)
 }
 
 .skillIconsContainer {
     width: 100%;
     display: flex;
-    flex-direction: column;
+
     justify-content: flex-start;
+    align-items: center;
 
     gap: clamp(56px, 4vw, 112px)
 }
@@ -74,7 +75,7 @@
 
 .flipCard {
 
-    width: clamp(70px, 10vw, 160px);
+    width: clamp(70px, 8vw, 140px);
     //   height: clamp(100px, 10vw, 180px);
     aspect-ratio: 1/1;
     perspective: 1000px;
@@ -112,7 +113,7 @@
         gap: 10px;
 
         >img {
-            width: clamp(30px, 5vw, 70px);
+            width: clamp(30px, 4vw, 60px);
         }
     }
 
@@ -121,7 +122,7 @@
 
         >span {
             text-align: center;
-            font-size: clamp(0.7rem, 1.5vw, 1.2rem);
+            font-size: clamp(0.7rem, 1.3vw, 1.2rem);
             font-weight: 600;
         }
     }
@@ -169,12 +170,30 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
     align-items: center;
-    // box-shadow: var(--shadow);
-    gap: clamp(16px, 2vw, 48px);
-
+    box-shadow: var(--shadow);
+    padding: 16px 64px;
     border-radius: 10px;
+
+
+}
+
+
+
+.learningProgressContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(18px, 2vw, 48px);
+
+    >h2 {
+        width: 100%;
+        text-align: start;
+        border-bottom: solid var(--dark);
+        box-sizing: border-box;
+        padding: 4px;
+    }
 }
 
 .learningProgressInner {
@@ -188,17 +207,18 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: clamp(0px, 1vw, 32px);
+    gap: clamp(0px, 1vw, 28px);
 
     >span {
-        font-size: 32px;
+        font-size: clamp(16px, 5vw, 24px);
         color: var(--dark);
         font-weight: 400;
     }
 }
 
 svg {
-    width: clamp(120px, 11vw, 200px);
+    width: clamp(80px, 8vw, 140px);
+    height: clamp(80px, 8vw, 140px);
     transition: transform 0.3s ease-in-out;
 
     &:hover {
@@ -294,27 +314,16 @@ svg {
 //     }
 // }
 
-@media(max-width: 1300px) {
 
-
-    .progressContainer {
-
-        >span {
-            font-size: 24px;
-
-        }
-    }
-}
 
 @media(max-width: 1150px) {
 
     .skillContainer {
-        flex-direction: column;
         align-items: center;
     }
 
     .skillIconsContainer {
-
+        flex-direction: column;
         align-items: center;
     }
 
@@ -326,6 +335,16 @@ svg {
         align-items: center;
     }
 
+
+}
+
+@media(max-width: 1000px) {
+
+    .progressContainer {
+
+        gap: 16px;
+    }
+
     .textContainer {
         >h2 {
             text-align: center;
@@ -334,21 +353,14 @@ svg {
 
 }
 
-@media(max-width: 1000px) {
 
-
-
-
-    .progressContainer {
-
-        gap: 16px;
-
-        >span {
-            font-size: 18px;
-
+@media(max-width: 600px) {
+    .learningProgress{
+        padding: 16px;
+    }
+    .learningProgressContainer{
+        >h2{
+            text-align: center;
         }
     }
 }
-
-
-@media(max-width: 600px) {}

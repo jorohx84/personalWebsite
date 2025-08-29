@@ -5,7 +5,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     gap: clamp(8px, 5vw, 16px);
-    margin-bottom: clamp(64px, 4vw, 200px);
+    margin-bottom: clamp(32px, 2vw, 200px);
 
     >div {
         display: flex;
@@ -31,7 +31,7 @@
     border-radius: 100px;
 }
 
-@media(max-width:1360px) {
+@media(max-width:750px) {
     .headlineContainer {
         align-items: center;
 

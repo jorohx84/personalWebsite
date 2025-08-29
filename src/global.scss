@@ -67,7 +67,7 @@ h1 {
 
 h2 {
     margin: 0;
-    font-size: clamp(1.2rem, 2vw, 1.6rem);
+    font-size: clamp(1.2rem, 1.6vw, 1.6rem);
     font-weight: 400;
     color: var(--main);
 }
@@ -88,8 +88,8 @@ h4 {
 
 button {
     background-color: var(--dark);
-    width: 180px;
-    height: 60px;
+    width: clamp(120px, 10vw,160px);
+    aspect-ratio: 1/0.375;
     border: none;
     border-radius: 10px;
     color: var(--white-font);
@@ -100,8 +100,8 @@ button {
 
 .btnBack {
     position: relative;
-    width: 180px;
-    height: 60px;
+    width: clamp(120px, 10vw,160px);
+    aspect-ratio: 1/0.375;
     border-radius: 10px;
     background-color: var(--back);
     transition: transform 0.2s ease-in-out;
@@ -153,18 +153,18 @@ button {
 
 
 
-@media(max-width:1000px) {
-    button {
-        width: 160px;
-        height: 50px;
-        font-size: 0.8rem;
-    }
+// @media(max-width:1000px) {
+//     button {
+//         width: 160px;
+//         height: 50px;
+//         font-size: 0.8rem;
+//     }
 
-    .btnBack {
-        width: 160px;
-        height: 50px;
-    }
-}
+//     .btnBack {
+//         width: 160px;
+//         height: 50px;
+//     }
+// }
 
 
 @media(max-width: 750px) {

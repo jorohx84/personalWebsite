@@ -1,0 +1,95 @@
+.testimonialsSection {
+    width: 100%;
+    min-height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+      gap: 112px;
+}
+
+.testimonialContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 72px;
+    flex-wrap: wrap;
+}
+
+.testimonialCard {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    background-color: var(--back);
+    padding: clamp(28px, 6vw, 96px) clamp(24px, 6vw, 56px);
+
+    gap: 48px;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: var(--shadow);
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    >img {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: -35px;
+        left: -35px;
+        background-color: var(--back);
+        border-radius: 100px;
+        // border: solid var(--dark);
+        box-shadow: var(--shadow);
+
+    }
+
+    &:hover {
+
+
+        .memoji0 {
+            content: url(./../public/memojis/ramona_twink.svg);
+        }
+
+        .memoji1 {
+            content: url(./../public/memojis/nadine_twink.svg);
+        }
+
+
+
+        .memoji2 {
+            content: url(./../public/memojis/volker_twink.svg);
+        }
+    }
+}
+
+@media(max-width: 1050px) {
+
+
+    .testimonialContainer {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 670px) {
+    .testimonialCard{
+        >img{
+            left: 50%;
+            top: -50px;
+            transform: translateX(-50%);
+        }
+    }
+}

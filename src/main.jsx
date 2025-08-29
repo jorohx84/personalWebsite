@@ -5,6 +5,7 @@ import Hero from "./hero";
 import Aboutme from "./aboutme";
 import Skills from "./skills";
 import Projects from "./projects";
+import Testimonials from "./testimonials";
 const Main = () => {
 
 
@@ -14,7 +15,7 @@ const Main = () => {
             <Aboutme />
             <Skills />
             <Projects />
-       
+            <Testimonials />
         </section>
 
     );

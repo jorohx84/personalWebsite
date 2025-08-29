@@ -104,28 +104,9 @@ const Skills = () => {
                     <div className={styles.skillIconsContainer}>
 
                         <div className={styles.textContainer}>
-                            <h2>Lorem ipsum dolor sit amet consectetur, adipisicing elit. at.</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea omnis natus aliquid nihil accusantium in iusto maxime, magni illo recusandae quaerat eum dolores quas qui quasi repellat velit. Repellendus, quo!Lorem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis, optio ipsam quam vel commodi ad facilis animi quasi quod accusantium aliquid placeat odit mollitia eos quia voluptate ea ex saepe. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis quidem eveniet delectus accusamus vero minima consectetur ipsa optio, nobis quos repellendus id atque, officia obcaecati labore aliquid exercitationem nam dolorem!</p>
+                            <h2>{t('skills.textHeadline')}</h2>
+                            <p>{t('skills.text')}</p>
                         </div>
-
-                        <div className={styles.skillIcons}>
-                            {skills.map((icon, index) => (
-                                <div key={index}>
-                                    <div className={styles.flipCard} id="skillIcon${index}">
-                                        <div className={styles.flipCardInner}>
-                                            <div className={styles.flipCardFront}>
-                                                <img src={icon.path} alt="" />
-                                            </div>
-                                            <div className={styles.flipCardBack}>
-                                                <span>{icon.name}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-
-                        </div>
-
 
                     </div>
 
@@ -160,36 +141,53 @@ const Skills = () => {
 
                         </div> */}
 
+                        <div className={styles.skillIcons}>
+                            {skills.map((icon, index) => (
+                                <div key={index}>
+                                    <div className={styles.flipCard} id="skillIcon${index}">
+                                        <div className={styles.flipCardInner}>
+                                            <div className={styles.flipCardFront}>
+                                                <img src={icon.path} alt="" />
+                                            </div>
+                                            <div className={styles.flipCardBack}>
+                                                <span>{icon.name}</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
 
+                        </div>
 
 
 
 
                         <div className={styles.learningProgress}>
-                            <h2>Im currently Learning</h2>
-                            <div className={styles.learningProgressInner}>
-                                {/* Erster Ring */}
-                                <div className={styles.progressContainer}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
-                                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
-                                        <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
-                                        <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">50%</text>
-                                    </svg>
-                                    <span>Python</span>
-                                </div>
-                                {/* Zweiter Ring */}
-                                <div className={styles.progressContainer}>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
-                                        <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
-                                        <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
-                                        <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">30%</text>
-                                    </svg>
+                          <div className={styles.learningProgressContainer}>
+                                <h2>{t('skills.subHeadline')}</h2>
+                                <div className={styles.learningProgressInner}>
+                                    {/* Erster Ring */}
+                                    <div className={styles.progressContainer}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
+                                            <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">50%</text>
+                                        </svg>
+                                        <span>Python</span>
+                                    </div>
+                                    {/* Zweiter Ring */}
+                                    <div className={styles.progressContainer}>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
+                                            <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">30%</text>
+                                        </svg>
 
-                                    <span>Django</span>
-                                </div>
+                                        <span>Django</span>
+                                    </div>
 
+                                </div>
                             </div>
-
                         </div>
 
 
