@@ -230,7 +230,8 @@ svg {
 
 .skillflowContainer {
     width: 100%;
-    height: clamp(50px, 30vw, 620px);
+    // height: clamp(50px, 30vw, 620px);
+    aspect-ratio: 2/1;
     position: relative;
 
 
