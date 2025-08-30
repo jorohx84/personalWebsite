@@ -74,27 +74,21 @@ const Skills = () => {
         // },
     ];
 
-    const skills2 = [
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-        {},
-    ];
+
 
     const [inView, setinView] = useState(false);
     const changePosition = () => {
         const ref = document.getElementById('flow');
         const rect = ref.getBoundingClientRect();
-        const viewState = rect.top < window.innerHeight * 0.4 ? true : false;
+        const trigger = window.innerWidth < 750 ? 0.6 : 0.25;
+        const windowHeight = window.innerHeight * trigger;
+        const viewState = rect.top < windowHeight ? true : false;
+        console.log(windowHeight);
+        console.log(rect.top);
+
         setinView(viewState)
 
     }
-
-
 
     useEffect(() => {
         window.addEventListener('scroll', changePosition);
@@ -130,17 +124,63 @@ const Skills = () => {
                 <div className={styles.skillContainer}>
 
 
-                    <div className={styles.skillIconsContainer}>
 
+
+
+                    <div className={styles.skillIconsContainer}>
                         <div className={styles.textContainer}>
                             <h2>{t('skills.textHeadline')}</h2>
                             <p>{t('skills.text')}</p>
+
+
+
+{/* 
+                            <div className={styles.methodContainer}>
+                                <h2>Softskills</h2>
+                                <div className={styles.methodCards}>
+                                    {methods.map((method, index) => (
+                                        <div key={index}>
+                                            <div className={styles.methodCard}>
+                                                <h3>{method.name}</h3>
+                                            </div>
+                                        </div>
+                                    ))}
+
+                                </div>
+
+
+                            </div> */}
+
+
+                    
+
+
+
+                        </div>
+
+
+
+                        <div className={styles.skillflowContainer} id="flow">
+                            <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>STACK</h1>
+                            {skills.map((skill, index) => (
+                                <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
+                                    <img src={skill.path} alt="" />
+                                </div>
+                            ))}
                         </div>
 
                     </div>
 
 
 
+                    {/* <div className={styles.skillflowContainer} id="flow">
+                        <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>Skills</h1>
+                        {skills.map((skill, index) => (
+                            <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
+                                <img src={skill.path} alt="" />
+                            </div>
+                        ))}
+                    </div> */}
 
 
 
@@ -150,26 +190,36 @@ const Skills = () => {
 
                     <div className={styles.skillIconsContainer}>
 
+        <div className={styles.learningProgress}>
+                                <div className={styles.learningProgressContainer}>
+                                    <h2>{t('skills.subHeadline')}</h2>
+                                    <div className={styles.learningProgressInner}>
 
-
-
-
-                        {/* <div className={styles.methodContainer}>
-                            <h2>Softskills</h2>
-                            <div className={styles.methodCards}>
-                                {methods.map((method, index) => (
-                                    <div key={index}>
-                                        <div className={styles.methodCard}>
-                                            <p>{method.name}</p>
+                                        <div className={styles.progressContainer}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                                <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
+                                                <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">50%</text>
+                                            </svg>
+                                            <span>Python</span>
                                         </div>
-                                    </div>
-                                ))}
 
+                                        <div className={styles.progressContainer}>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                                <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                                <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
+                                                <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">30%</text>
+                                            </svg>
+
+                                            <span>Django</span>
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
 
-                        </div> */}
-
+                        {/* 
                         <div className={styles.skillIcons}>
                             {skills.map((icon, index) => (
                                 <div key={index}>
@@ -186,49 +236,23 @@ const Skills = () => {
                                 </div>
                             ))}
 
-                        </div>
+                        </div> */}
 
 
 
 
-                        <div className={styles.learningProgress}>
-                            <div className={styles.learningProgressContainer}>
-                                <h2>{t('skills.subHeadline')}</h2>
-                                <div className={styles.learningProgressInner}>
-                                    {/* Erster Ring */}
-                                    <div className={styles.progressContainer}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
-                                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
-                                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
-                                            <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">50%</text>
-                                        </svg>
-                                        <span>Python</span>
-                                    </div>
-                                    {/* Zweiter Ring */}
-                                    <div className={styles.progressContainer}>
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
-                                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
-                                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
-                                            <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">30%</text>
-                                        </svg>
 
-                                        <span>Django</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
 
                     </div>
 
-                    <div className={styles.skillflowContainer} id="flow">
+                    {/* <div className={styles.skillflowContainer} id="flow">
                         <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>Skills</h1>
-                        {skills2.map((skills, index) => (
+                        {skills.map((skill, index) => (
                             <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
-                                <p>Hallo</p>
+                                <img src={skill.path} alt="" />
                             </div>
                         ))}
-                    </div>
+                    </div> */}
 
 
                 </div>

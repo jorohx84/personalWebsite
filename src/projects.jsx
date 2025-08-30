@@ -111,6 +111,7 @@ const Projects = () => {
     const [projectIndex, setProjectIndex] = useState(0);
     const [currentProject, setcurrentProject] = useState(projects[0]);
     const [isOpen, setisOpen] = useState(false);
+    const [isForward, setisForward] = useState(false)
     useEffect(() => {
         openProjectInfos(projectIndex);
 
@@ -126,11 +127,30 @@ const Projects = () => {
     }
 
 
+    const slideProject = (index, direction, event) => {
+        const step = direction === "forward" ? 1 : -1;
+        const currentIndex = (index + step + projects.length) % projects.length;
+        console.log(currentIndex);
+        openProjectInfos(currentIndex);
+        event.stopPropagation();
+    }
+
+
+
+
 
     return (
         <section className={styles.projectsSection} id="projects">
             <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('projects.headline')} />
+                <div className={styles.divider}>
+                    <div className={styles.leftLine}></div>
+                    <div className={styles.navigation}>
+                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
+                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
+                    </div>
+                    <div className={styles.rightLine}></div>
+                </div>
 
                 <div className={styles.projectContainer}>
                     <div className={styles.projectsBarContainer}>
@@ -150,7 +170,7 @@ const Projects = () => {
                         )}
 
 
-                        <div className={styles.projectsInfoContainer}>
+                        <div className={styles.projectsInfoContainer} >
                             <img src={currentProject.imagePath} alt="" />
                             <h3>{currentProject.title}</h3>
                             <p>{currentProject.description}</p>
@@ -174,6 +194,16 @@ const Projects = () => {
                                     <button >Live Test</button>
                                 </div>
                             </div>
+                            {window.innerWidth <= 1000 && (
+                                <div className={styles.divider}>
+                                    <div className={styles.leftLine}></div>
+                                    <div className={styles.navigation}>
+                                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
+                                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
+                                    </div>
+                                    <div className={styles.rightLine}></div>
+                                </div>
+                            )}
 
 
                         </div>

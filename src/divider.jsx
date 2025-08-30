@@ -1,12 +1,12 @@
 import React from "react";
 import styles from './divider.module.scss';
 
-const Divider = ({ section, left }) => {
+const Divider = ({ section, left, right }) => {
 
     return (
         <div className={styles.divider}>
             <div className={styles.leftLine} style={{ width: left }}></div>
-            {(section === 'aboutme' || section === 'skills' || section === 'projects') && (
+            {(section === 'aboutme' || section === 'skills') && (
 
                 <div className={styles.dot}></div>
 
@@ -22,15 +22,23 @@ const Divider = ({ section, left }) => {
                     {/* <div className={styles.dot}></div> */}
                     <a href="mailto:kontakt@johannes-roth.de"><img src="./icons/mail_dark.svg" alt="mail" /></a>
                     {/* <div className={styles.dot}></div> */}
-                    
-                        <a href="tel:015141202010"><img src="./icons/call.svg" alt="" /></a>
-                   
+
+                    <a href="tel:015141202010"><img src="./icons/call.svg" alt="" /></a>
+
 
                 </div>
             )}
 
+            {section === 'projects' && (
+                <div className={styles.navigation}>
+                    <div className={styles.slideBtn}><img src="./icons/left_arrow.svg" alt="" /></div>
+                    <div className={styles.slideBtn}><img src="./icons/right_arrow.svg" alt="" /></div>
+                </div>
 
-            <div className={styles.rightLine}></div>
+            )}
+
+
+            <div className={styles.rightLine} style={{ width: right }}></div>
         </div>
 
 
