@@ -25,7 +25,7 @@
     // border-radius: 10px;
     // color: var(--main);
 
-   
+
     min-width: 30px;
     min-height: 30px;
     border-radius: 100px;
@@ -38,7 +38,7 @@
 @keyframes pulse {
     0% {
         transform: scale(1.2);
-        
+
     }
 
     50% {
@@ -58,37 +58,22 @@
     background-color: var(--dark);
 }
 
-.linkBox {
+
+.arrowup {
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 200px;
+    border: solid 1px var(--dark);
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(4px, 1vw, 16px);
-    border: solid 1px var(--dark);
-    padding: 4px;
-    border-radius: 10px;
+    cursor: pointer;
 
-    >a {
-        min-width: clamp(35px, 3vw, 50px);
-        height: clamp(35px, 3vw, 50px);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        // background-color: var(--back);
-        border-radius: 10px;
-        transition: transform 0.3s ease-in-out;
-
-        >img {
-            width: clamp(25px, 3vw, 30px);
-            ;
-        }
-
-        &:hover {
-            transform: scale(1.1);
-        }
+    >img {
+        width: 25px;
+        transform: rotate(-90deg);
     }
 }
-
-
 
 
 

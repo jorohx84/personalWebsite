@@ -1,5 +1,5 @@
 
-import { translations } from "./i18n";
+import { translations } from "../i18n";
 
 import { createContext, useContext, useState } from "react";
 

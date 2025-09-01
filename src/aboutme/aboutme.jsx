@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
 import styles from "./aboutme.module.scss";
-import Headline from "./headline";
-import { useTranslation } from './useTranslation';
-import Divider from "./divider";
+import Headline from "../shared/headline";
+import { useTranslation } from '../services/useTranslation';
+import Divider from "../shared/divider";
 const Aboutme = () => {
     const [inView, setinView] = useState(false);
     const { t } = useTranslation('de');
     const softskills = t('about.softskills');
-    console.log(softskills);
     const softskillsImages = [
         '/icons/analytical.svg',
         '/icons/communication.svg',
@@ -21,7 +20,6 @@ const Aboutme = () => {
         const headlineRect = headline.getBoundingClientRect();
         const view = window.innerHeight * 0.1 > headlineRect.top ? true : false;
         setinView(view);
-        console.log(inView);
 
     }
 
@@ -48,12 +46,12 @@ const Aboutme = () => {
                             <p>{t('about.text')}</p>
                         </div>
 
-                        <div className={styles.btnContainer}>
+                        {/* <div className={styles.btnContainer}>
                             <div className="btnBack">
-                                <button>{t('about.button')}</button>
+                                <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
                             </div>
 
-                        </div>
+                        </div> */}
                     </div>
                     <div className={styles.softskills} >
                         {softskills.map((skill, index) => (
@@ -71,9 +69,15 @@ const Aboutme = () => {
 
                     </div>
                 </div>
+                
+                <div className={styles.btnContainer}>
+                    <div className="btnBack">
+                        <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
+                    </div>
 
+                </div>
             </div>
-            <Divider section="aboutme" left="10%" />
+
         </section>
     );
 }

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styles from './projects.module.scss';
-import Headline from "./headline";
-import { useTranslation } from "./useTranslation";
-import Divider from "./divider";
+import Headline from "../shared/headline";
+import { useTranslation } from "../services/useTranslation";
+import Divider from "../shared/divider";
 const Projects = () => {
     const { t } = useTranslation('de');
 
@@ -19,7 +19,7 @@ const Projects = () => {
                 "./icons/skills/firebase.svg",
             ],
             description: t('projects.joinText'),
-            link: "https://www.codred.de/join",
+            link: "https://www.johannes-roth.de/join",
             duration: "3",
             show: true,
         },
@@ -35,7 +35,7 @@ const Projects = () => {
             ],
             description: t('projects.dabubbleText'),
 
-            link: "https://www.codred.de/dabubble",
+            link: "https://www.johannes-roth.de/dabubble",
             duration: "5",
             show: true,
         },
@@ -50,7 +50,7 @@ const Projects = () => {
             ],
             description: t('projects.todoappText'),
 
-            link: "https://www.codred.de/todoapp",
+            link: "https://www.johannes-roth.de/todoapp",
             duration: "0.5",
             show: true,
         },
@@ -66,7 +66,7 @@ const Projects = () => {
             ],
             description: t('projects.applicationsText'),
 
-            link: "https://www.codred.de/applications",
+            link: "https://www.johannes-roth.de/applications",
             duration: "2",
             show: true,
         },
@@ -111,11 +111,11 @@ const Projects = () => {
     const [projectIndex, setProjectIndex] = useState(0);
     const [currentProject, setcurrentProject] = useState(projects[0]);
     const [isOpen, setisOpen] = useState(false);
-    const [isForward, setisForward] = useState(false)
-    useEffect(() => {
-        openProjectInfos(projectIndex);
 
-    }, [t, projectIndex]);
+    // useEffect(() => {
+    //     openProjectInfos(projectIndex);
+
+    // }, []);
 
     const openProjectInfos = (index) => {
         setProjectIndex(index);
@@ -143,14 +143,18 @@ const Projects = () => {
         <section className={styles.projectsSection} id="projects">
             <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('projects.headline')} />
-                <div className={styles.divider}>
-                    <div className={styles.leftLine}></div>
-                    <div className={styles.navigation}>
-                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
-                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
+                {window.innerWidth > 1000 && (
+                    <div className={styles.divider}>
+                        <div className={styles.leftLine}></div>
+                        <div className={styles.navigation}>
+                            <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
+                            <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
+                        </div>
+                        <div className={styles.rightLine}></div>
                     </div>
-                    <div className={styles.rightLine}></div>
-                </div>
+
+                )}
+
 
                 <div className={styles.projectContainer}>
                     <div className={styles.projectsBarContainer}>
@@ -191,10 +195,10 @@ const Projects = () => {
                             <div className={styles.projectsBtns}>
 
                                 <div className="btnBack">
-                                    <button >Live Test</button>
+                                    <button onClick={() => window.open(currentProject.link, "_blank")} >Live Test</button>
                                 </div>
                             </div>
-                            {window.innerWidth <= 1000 && (
+                            {/* {window.innerWidth <= 1000 && (
                                 <div className={styles.divider}>
                                     <div className={styles.leftLine}></div>
                                     <div className={styles.navigation}>
@@ -203,7 +207,7 @@ const Projects = () => {
                                     </div>
                                     <div className={styles.rightLine}></div>
                                 </div>
-                            )}
+                            )} */}
 
 
                         </div>

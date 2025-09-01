@@ -1,4 +1,4 @@
-import Testimonials from "./testimonials";
+import Testimonials from "./testimonials/testimonials";
 
 
 export const translations = {
@@ -41,7 +41,7 @@ export const translations = {
             headline: 'FÄHIGKEITEN',
             textHeadline: 'Modernes Webdevelopment mit agilem Mindset',
             text: 'Als Frontend-Entwickler mit fundierter Ausbildung in modernen Webtechnologien baue ich nutzerfreundliche und zukunftsorientierte Anwendungen. Aktuell erweitere ich meine Kompetenzen gezielt durch eine Weiterbildung zum Fullstack-Entwickler mit Python und Django, um Projekte ganzheitlich umsetzen zu können. Durch meine Erfahrung mit agilen Methoden wie Scrum und Kanban sowie den Einsatz von Tools wie Trello und Git arbeite ich strukturiert, effizient und teamorientiert. Mein Ziel ist es, innovative Lösungen zu entwickeln, die sowohl technisch als auch für den Endnutzer überzeugen.',
-            subHeadline: 'Momentan bilde ich mich weiter in :',
+            subHeadline: 'Auf dem Weg zum Fullstack Entwickler',
         },
         projects: {
             headline: 'PROJEKTE',
@@ -54,10 +54,105 @@ export const translations = {
             duration: 'Dauer:',
         },
         testimonials: {
+            headline: 'Empfehlungen',
             commentRamona: 'Als Kollege ist Johannes absolut zuverlässig und hilfsbereit. Er bringt sich aktiv ins Team ein, unterstützt andere bei Herausforderungen und sorgt für eine angenehme Arbeitsatmosphäre. Besonders beeindruckt mich seine strukturierte und lösungsorientierte Arbeitsweise, die das Team voranbringt.',
             commentNadine: 'Mit Johannes zusammenzuarbeiten ist immer angenehm, da er professionell, kommunikativ und teamorientiert ist. Er geht respektvoll mit unterschiedlichen Meinungen um und schafft es, gemeinsame Lösungen zu finden. Seine positive Art motiviert das Team, und er ist immer bereit, Verantwortung zu übernehmen.',
             commentVolker: 'Johannes zeichnet sich durch eine hohe Eigenverantwortung und eine sehr strukturierte Arbeitsweise aus. Er arbeitet effizient, bleibt auch in stressigen Situationen lösungsorientiert und verliert nie den Blick für das Wesentliche. Zudem überzeugt er durch seine Teamfähigkeit, da er nicht nur eigene Aufgaben erfolgreich meistert, sondern auch aktiv zur Weiterentwicklung des Teams beiträgt.',
         },
+        contact: {
+            headline: 'Kontakt',
+            text: 'Durchdachtes Interface Design entsteht nicht zufällig – es ist das Ergebnis von technischem Verständnis, einem Auge fürs Detail und echter Begeisterung für Webentwicklung. Wenn du jemanden suchst, der genau das mitbringt und sich schnell in neue Teams, Tools und Themen einarbeitet, dann lass uns ins Gespräch kommen. Ich freue mich auf deine Nachricht!',
+        },
+        contactform: {
+            name: 'Name',
+            email: 'E-Mail',
+            phone: 'Telefon',
+            message: 'Nachricht',
+            privacy1: 'Bitte stimme der',
+            privacy2: ' zu.',
+            link: 'Datenschutzerklärung',
+            emptyfields: {
+                name: 'Name erforderlich',
+                email: 'E-Mail-Adresse erforderlich',
+                phone: 'Telefonnummer erforderlich',
+                message: 'Bitte geben Sie eine Nachricht ein',
+                privacy: 'Bitte der Datenschutzbestimmung zustimmen',
+            },
+            errormessages: {
+                email: 'Ungültige E-Mail',
+                phone: 'Bitte gültige Telefonnummer eingeben',
+                message: 'Mindestens 10 Zeichen',
+            },
+        },
+
+        imprint: {
+            h1: "Impressum",
+            responsible: {
+                h2: "Verantwortlich gemäß § 5 TMG",
+                name: "Johannes Roth",
+                address: "Max-Seither-Ring 32, 76863 Herxheim",
+
+            },
+            contentLiability: {
+                h2: "Haftung für Inhalte",
+                responsibility: "Als Diensteanbieter bin ich gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.",
+                noMonitoringObligation: "Nach §§ 8 bis 10 TMG bin ich jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+                removalObligation: "Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.",
+                liabilityStart: "Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden entsprechender Rechtsverletzungen werde ich diese Inhalte umgehend entfernen."
+            },
+            linksLiability: {
+                h2: "Haftung für Links",
+                externalLinks: "Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen.",
+                responsibilityThirdParties: "Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich.",
+                monitoringLinks: "Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar.",
+                removalLinks: "Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen."
+            },
+            copyright: {
+                h2: "Urheberrecht",
+                ownership: "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht.",
+                usageRestriction: "Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+                personalUse: "Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.",
+                thirdPartyContent: "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Inhalte Dritter sind als solche gekennzeichnet.",
+                infringementNotice: "Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen."
+            }
+        },
+        privacy: {
+            h1: "Datenschutz",
+            general: {
+                h2: "Allgemeine Hinweise",
+                intro: "Der Schutz Ihrer persönlichen Daten ist mir ein besonderes Anliegen. Ich behandle Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.",
+                scope: "Diese Datenschutzerklärung informiert über die Art, den Umfang und Zweck der Erhebung und Verwendung personenbezogener Daten auf dieser Website."
+            },
+            dataCollection: {
+                h2: "Erhebung und Speicherung personenbezogener Daten",
+                automaticData: "Beim Besuch dieser Website werden automatisch Informationen erfasst, die Ihr Browser übermittelt. Dazu gehören: IP-Adresse, Datum und Uhrzeit des Zugriffs, verwendeter Browser, Betriebssystem und Referrer-URL. Diese Daten sind nicht bestimmten Personen zuordenbar.",
+                contactData: "Wenn Sie mich per E-Mail kontaktieren, werden Ihre Angaben zur Bearbeitung der Anfrage sowie für mögliche Anschlussfragen gespeichert. Diese Daten gebe ich nicht ohne Ihre Einwilligung weiter."
+            },
+            usage: {
+                h2: "Verwendung der Daten",
+                purpose: "Die erfassten Daten dienen ausschließlich der Sicherstellung eines reibungslosen Verbindungsaufbaus der Website, zur Auswertung der Systemsicherheit und -stabilität sowie zu administrativen Zwecken.",
+                noProfiling: "Es erfolgt keine Zusammenführung dieser Daten mit anderen Datenquellen und keine Erstellung von Nutzerprofilen."
+            },
+            rights: {
+                h2: "Ihre Rechte",
+                information: "Sie haben das Recht, jederzeit Auskunft über Ihre gespeicherten personenbezogenen Daten zu erhalten.",
+                correction: "Sie haben das Recht auf Berichtigung unrichtiger Daten.",
+                deletion: "Sie haben das Recht auf Löschung Ihrer Daten, sofern dem keine gesetzlichen Aufbewahrungspflichten entgegenstehen.",
+                objection: "Sie haben das Recht, der Verarbeitung Ihrer personenbezogenen Daten zu widersprechen."
+            },
+            contact: {
+                h2: "Verantwortliche Stelle",
+                info: "Für Fragen zum Datenschutz können Sie sich jederzeit an mich wenden:",
+                name: "Max Mustermann",
+                email: "<a href='mailto:max@mustermann.dev'>max@mustermann.dev</a>",
+                phone: "<a href='tel:+491234567890'>+49 123 4567890</a>"
+            }
+        },
+
+        footer: {
+            legal: 'Impressum',
+            privacy:'Datenschutz',
+        }
     },
 
     en: {
@@ -98,7 +193,7 @@ export const translations = {
             headline: 'SKILLS',
             textHeadline: 'Modern Web Development with an Agile Mindset',
             text: 'As a frontend developer with a solid background in modern web technologies, I create user-friendly and future-oriented applications. I am currently expanding my expertise through advanced training as a fullstack developer with Python and Django, enabling me to deliver complete end-to-end solutions. With experience in agile methodologies such as Scrum and Kanban, and the use of collaboration tools like Trello and Git, I work in a structured, efficient, and team-oriented way. My goal is to develop innovative solutions that excel both technically and in terms of user experience.',
-            subHeadline: 'I`m currently Learning :',
+            subHeadline: 'On the way to full-stack developer',
         },
         projects: {
             headline: 'PROJECTS',
@@ -111,10 +206,104 @@ export const translations = {
             duration: 'Duration:',
         },
         testimonials: {
-
+            headline: 'Testimonials',
             commentRamona: 'Johannes is an absolutely reliable and helpful colleague. He actively contributes to the team, supports others with challenges, and helps create a positive work atmosphere. I am particularly impressed by his structured and solution-oriented approach, which drives the team forward.',
             commentNadine: 'Working with Johannes is always a pleasure because he is professional, communicative, and team-oriented. He respects different opinions and finds common solutions. His positive attitude motivates the team, and he is always ready to take on responsibility.',
             commentVolker: 'Johannes demonstrates a high level of responsibility and a very structured way of working. He is efficient, remains solution-oriented even in stressful situations, and never loses sight of what’s important. Additionally, he stands out for his teamwork skills, successfully managing his tasks while actively contributing to the team’s development.',
         },
+        contact: {
+            headline: 'Contact',
+            text: 'Effective user interfaces doesn’t happen by accident – it’s the result of technical understanding, attention to detail, and genuine passion for web development. If you’re looking for someone who brings all of that to the table and quickly adapts to new teams, tools, and topics, let’s talk. I’m looking forward to hearing from you!',
+        },
+        contactform: {
+            name: 'name',
+            email: 'mail',
+            phone: 'phone',
+            message: 'message',
+            privacy1: 'please accept the',
+            privacy2: '.',
+            link: 'privacy policy',
+            emptyfields: {
+                name: 'name required',
+                email: 'email required',
+                phone: 'phone number required',
+                message: 'please enter your message here',
+                privacy: 'please accept the privacy policy',
+            },
+            errormessages: {
+                email: 'invalid email',
+                phone: 'invalid phone number',
+                message: 'At least 10 characters',
+            },
+        },
+        imprint: {
+            h1: "Imprint",
+            responsible: {
+                h2: "Responsible according to § 5 TMG",
+                name: "Johannes Roth",
+                address: "Max-Seither-Ring 32, 76863 Herxheim",
+
+            },
+            contentLiability: {
+                h2: "Liability for Content",
+                responsibility: "As a service provider, I am responsible for my own content on these pages in accordance with § 7 para.1 TMG under general law.",
+                noMonitoringObligation: "According to §§ 8 to 10 TMG, however, I am not obliged to monitor transmitted or stored third-party information or investigate circumstances that indicate illegal activity.",
+                removalObligation: "Obligations to remove or block the use of information under general laws remain unaffected.",
+                liabilityStart: "However, liability in this regard is only possible from the time of knowledge of a specific legal violation. Upon becoming aware of such infringements, I will remove this content immediately."
+            },
+            linksLiability: {
+                h2: "Liability for Links",
+                externalLinks: "My website contains links to external websites of third parties, on whose content I have no influence. Therefore, I cannot accept any liability for this external content.",
+                responsibilityThirdParties: "The respective provider or operator of the linked pages is always responsible for the content of those pages.",
+                monitoringLinks: "Permanent monitoring of the content of the linked pages is not reasonable without concrete indications of a violation of the law.",
+                removalLinks: "Upon becoming aware of any infringements, I will remove such links immediately."
+            },
+            copyright: {
+                h2: "Copyright",
+                ownership: "The content and works created by the site operator on these pages are subject to German copyright law.",
+                usageRestriction: "The reproduction, editing, distribution, and any kind of use outside the limits of copyright law require the written consent of the respective author or creator.",
+                personalUse: "Downloads and copies of this site are only permitted for private, non-commercial use.",
+                thirdPartyContent: "Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. Third-party content is marked as such.",
+                infringementNotice: "If you nevertheless become aware of a copyright infringement, please notify me. Upon becoming aware of such infringements, I will remove this content immediately."
+            }
+        },
+        privacy: {
+            h1: "Privacy Policy",
+            general: {
+                h2: "General Information",
+                intro: "Protecting your personal data is very important to me. I treat your personal data confidentially and in accordance with the legal data protection regulations and this privacy policy.",
+                scope: "This privacy policy explains the nature, scope, and purpose of the collection and use of personal data on this website."
+            },
+            dataCollection: {
+                h2: "Collection and Storage of Personal Data",
+                automaticData: "When visiting this website, information that your browser transmits is automatically collected. This includes: IP address, date and time of access, browser used, operating system, and referrer URL. This data cannot be assigned to specific individuals.",
+                contactData: "If you contact me via email, your information will be stored for the purpose of processing the request and for possible follow-up questions. This data will not be shared without your consent."
+            },
+            usage: {
+                h2: "Use of Data",
+                purpose: "The data collected is used solely to ensure a smooth connection to the website, to evaluate system security and stability, and for administrative purposes.",
+                noProfiling: "There is no merging of this data with other data sources and no user profiling takes place."
+            },
+            rights: {
+                h2: "Your Rights",
+                information: "You have the right to request information about your stored personal data at any time.",
+                correction: "You have the right to request correction of inaccurate data.",
+                deletion: "You have the right to request deletion of your data unless legal retention obligations prevent this.",
+                objection: "You have the right to object to the processing of your personal data."
+            },
+            contact: {
+                h2: "Responsible Entity",
+                info: "If you have questions regarding data protection, you can contact me at any time:",
+                name: "Max Mustermann",
+
+            }
+        },
+           footer: {
+            legal: 'legal notice',
+            privacy:'privacy police',
+        }
     }
+
 };
+
+

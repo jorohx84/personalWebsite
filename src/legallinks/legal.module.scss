@@ -1,0 +1,39 @@
+.legalSection{
+    width: 100%;
+    max-width: 2160px;
+    min-height:calc(100vh - 100px) ;
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 56px;
+    margin-top: 32px;
+   
+}
+
+.textContainer{
+    width: 100%;
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    >div{
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        >a{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            >img{
+                width: 25px;
+            }
+        }
+    }
+}

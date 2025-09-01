@@ -33,6 +33,7 @@ body {
     color: var(--font);
     font-weight: 250;
     font-family: 'Inter';
+    overflow-x: hidden;
     // background-color: var(--button);
 
 }
@@ -88,7 +89,7 @@ h4 {
 
 button {
     background-color: var(--dark);
-    width: clamp(120px, 10vw,160px);
+    width: clamp(140px, 8vw, 160px);
     aspect-ratio: 1/0.375;
     border: none;
     border-radius: 10px;
@@ -100,7 +101,7 @@ button {
 
 .btnBack {
     position: relative;
-    width: clamp(120px, 10vw,160px);
+    width: clamp(140px, 8vw, 160px);
     aspect-ratio: 1/0.375;
     border-radius: 10px;
     background-color: var(--back);
@@ -132,7 +133,7 @@ button {
 }
 
 .screenMargin {
-    margin-top: clamp(112px, 8vw, 172px); //global machen!!!!
+    margin-top: clamp(112px, 8vw, 172px);
 }
 
 .placeholder {

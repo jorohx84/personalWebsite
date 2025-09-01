@@ -1,11 +1,12 @@
 import React from "react";
 import { Router } from "react-router-dom";
 import styles from './main.module.scss';
-import Hero from "./hero";
-import Aboutme from "./aboutme";
-import Skills from "./skills";
-import Projects from "./projects";
-import Testimonials from "./testimonials";
+import Hero from "./hero/hero";
+import Aboutme from "./aboutme/aboutme";
+import Skills from "./skills/skills";
+import Projects from "./projects/projects";
+import Testimonials from "./testimonials/testimonials";
+import Contact from "./contact/contact";
 const Main = () => {
 
 
@@ -16,6 +17,7 @@ const Main = () => {
             <Skills />
             <Projects />
             <Testimonials />
+            <Contact />
         </section>
 
     );

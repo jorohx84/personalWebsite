@@ -1,0 +1,112 @@
+.contactSection {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+   margin-bottom: 144px;
+
+    .content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: clamp(24px, 0.5vw, 56px);
+
+        .contactContainer {
+            width: 100%;
+            display: flex;
+            gap: 56px;
+
+            .textContainer {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 32px;
+
+                >p {
+                    width: 100%;
+                    max-width: 700px;
+                }
+
+                .contactData {
+                    border-top: solid 1px var(--dark);
+                    width: 100%;
+                    max-width: 700px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 8px;
+
+
+                    .adress {
+                        display: flex;
+                        flex-direction: column;
+                        margin-block: 24px;
+                        gap: 4px;
+
+                        >p {
+                            font-size: clamp(16px, 1vw, 18px);
+
+                        }
+
+                        :nth-child(1) {
+                            font-weight: 500;
+
+                        }
+                    }
+
+                    .dataContainer {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        >img {
+                            width: 24px;
+                        }
+
+                        >a {
+                            font-size: clamp(16px, 1vw, 18px);
+                            font-weight: 250;
+                        }
+
+
+                    }
+                }
+
+                .linkboxContainer {
+                    width: fit-content;
+                }
+            }
+
+            .formContainer {
+                width: 100%;
+
+                display: flex;
+                justify-content: flex-start;
+            }
+
+          
+
+        }
+          .divider {
+                width: 100%;
+                margin-top: -30px;
+            }
+    }
+}
+
+@media(max-width:1000px) {
+    .contactContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textContainer {
+        align-items: center;
+    }
+
+    .divider{
+        margin-top: 100px !important;
+    }
+}

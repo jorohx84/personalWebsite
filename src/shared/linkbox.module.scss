@@ -1,0 +1,29 @@
+.linkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(4px, 1vw, 16px);
+    border: solid 1px var(--dark);
+    padding: 4px;
+    border-radius: 10px;
+width: fit-content;
+    >a {
+        min-width: clamp(35px, 3vw, 50px);
+        height: clamp(35px, 3vw, 50px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // background-color: var(--back);
+        border-radius: 10px;
+        transition: transform 0.3s ease-in-out;
+
+        >img {
+            width: clamp(25px, 3vw, 30px);
+            ;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

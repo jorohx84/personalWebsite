@@ -70,12 +70,14 @@
     width: 100%;
     max-width: 800px;
     // height: clamp(50px, 30vw, 620px);
-
     aspect-ratio: 2/1;
     position: relative;
     margin-top: clamp(0px, calc(100px - 7vw), 100px);
 
-
+    >span {
+        font-size: clamp(32px, 2vw, 56px);
+        font-weight: 400;
+    }
 
 }
 
@@ -85,6 +87,148 @@
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow);
+    border-radius: 10px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    transition: left 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+
+    >img {
+        width: 45%;
+    }
+
+    &:nth-child(1) {
+        top: 30%;
+        left: 40%;
+    }
+
+    &:nth-child(2) {
+        top: 30%;
+        left: 85%;
+    }
+
+    &:nth-child(3) {
+        top: 10%;
+        left: 10%;
+    }
+
+    &:nth-child(4) {
+        top: 10%;
+        left: 65%;
+    }
+
+    &:nth-child(5) {
+        top: 80%;
+        left: 20%;
+    }
+
+    &:nth-child(6) {
+        top: 80%;
+        left: 80%;
+    }
+
+    &:nth-child(7) {
+        top: 50%;
+        left: 10%;
+    }
+
+    &:nth-child(8) {
+        top: 80%;
+        left: 50%;
+    }
+}
+
+.skillTitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: top 0.8s ease-in-out, left 0.8s ease-in-out, transform 0.8s ease-in-out, width 0.8s ease-in-out, height 0.8s ease-in-out;
+}
+
+.movetitle {
+    opacity: 0;
+
+
+}
+
+.move1 {
+    left: 8px !important;
+    top: 0 !important;
+
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move2 {
+    left: calc(25% + 8px) !important;
+    top: 0 !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move3 {
+    left: calc(50% + 8px) !important;
+    top: 0 !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move4 {
+    left: calc(75% + 8px) !important;
+    top: 0 !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move5 {
+    left: 8px !important;
+    top: 50% !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move6 {
+    left: calc(25% + 8px) !important;
+    top: 50% !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move7 {
+    left: calc(50% + 8px) !important;
+    top: 50% !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+.move8 {
+    left: calc(75% + 8px) !important;
+    top: 50% !important;
+    width: calc(100%/4 - 16px) !important;
+    height: calc(100%/2 - 16px) !important;
+}
+
+
+
+
+//test
+
+.flipCard {
+
+
+    //   height: clamp(100px, 10vw, 180px);
+
+    perspective: 1000px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
     background-color: white;
     width: 40px;
@@ -134,96 +278,7 @@
         top: 80%;
         left: 50%;
     }
-}
 
-.skillTitle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: top 0.8s ease-in-out, left 0.8s ease-in-out, transform 0.8s ease-in-out, width 0.8s ease-in-out, height 0.8s ease-in-out;
-}
-
-.movetitle {
-
-    height: 100px;
-    transform: translateY(clamp(-100%, 20vw, -150%));
-
-}
-
-.move1 {
-    left: 8px !important;
-    top: 0 !important;
-
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move2 {
-    left: calc(25% + 8px) !important;
-    top: 0 !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move3 {
-    left: calc(50% + 8px) !important;
-    top: 0 !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move4 {
-    left: calc(75% + 8px) !important;
-    top: 0 !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move5 {
-    left: 8px !important;
-    top: 50% !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move6 {
-    left: calc(25% + 8px) !important;
-    top: 50% !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move7 {
-    left: calc(50% + 8px) !important;
-    top: 50% !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-.move8 {
-    left: calc(75% + 8px) !important;
-    top: 50% !important;
-    width: calc(100%/4 - 16px);
-    height: calc(100%/2 - 16px);
-}
-
-
-
-
-//test
-
-.flipCard {
-
-    width: clamp(70px, 8vw, 140px);
-    //   height: clamp(100px, 10vw, 180px);
-    aspect-ratio: 1/1;
-    perspective: 1000px;
     cursor: pointer;
 
     .flipCardInner {
@@ -258,7 +313,7 @@
         gap: 10px;
 
         >img {
-            width: clamp(30px, 4vw, 60px);
+            width: 45%;
         }
     }
 
@@ -524,9 +579,10 @@ svg {
     .content {
         align-items: center;
     }
-    .learningProgress{
-       max-width: unset;
-       width:fit-content;
+
+    .learningProgress {
+        max-width: unset;
+        width: fit-content;
     }
 
     .learningProgressContainer {

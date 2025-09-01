@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './regulator.module.scss';
-import { useTranslation } from './useTranslation';
+import { useTranslation } from '../services/useTranslation';
 
 const Regulator = () => {
     const { t, lang, setLang } = useTranslation("de");

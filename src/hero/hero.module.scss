@@ -1,14 +1,22 @@
 .heroSection {
     width: 100%;
-    min-height: calc(100vh - 100px);
-    display: flex;
 
-    justify-content: center;
-    align-items: flex-start;
+    min-height: calc(100vh - 190px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     max-width: fit-content;
     position: relative;
+
 }
 
+.heroContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+}
 
 .title {
     height: calc(100% - clamp(80px, 10vw, 200px));
@@ -74,27 +82,17 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 56px;
-    padding-right: 25px;
-
+    padding-right: clamp(25px, 7vw, 160px)
 }
 
-
-
-
-
-
-
-
 .divider {
-    position: absolute;
+
     width: 100%;
-    position: absolute;
-    bottom: 20px;
-    left: 0;
+
 }
 
 @media(max-width: 1050px) {
-    .heroSection {
+    .heroContainer {
         justify-content: flex-start;
         align-items: center;
         flex-direction: column;
@@ -124,13 +122,17 @@
         width: 100%;
         bottom: 16px;
     }
-}
 
-@media(max-width: 750px) {
-    .heroSection {
-        height: calc(100vh - 80px);
+    .margin {
+        padding-left: unset;
     }
 
+}
+
+@media(max-width: 780px) {
+    .heroSection{
+        gap: 112px;
+    }
     .links {
         >a {
             width: 40px;
@@ -146,4 +148,5 @@
     .leftLine {
         width: 100%;
     }
+
 }
