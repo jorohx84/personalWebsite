@@ -4,7 +4,7 @@
     min-height: calc(100vh - 190px);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+   
     align-items: center;
     max-width: fit-content;
     position: relative;
@@ -131,7 +131,7 @@
 
 @media(max-width: 780px) {
     .heroSection{
-        gap: 112px;
+        gap: 88px;
     }
     .links {
         >a {
@@ -149,4 +149,9 @@
         width: 100%;
     }
 
+}
+@media(max-width: 570px) {
+    .divider{
+        margin-bottom: 40px;
+    }
 }

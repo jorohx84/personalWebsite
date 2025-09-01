@@ -5,6 +5,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 112px;
+
 }
 
 .content {
@@ -12,6 +14,7 @@
     flex: 1;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 112px;
 }
 
@@ -20,6 +23,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     gap: 72px;
 
 }

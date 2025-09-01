@@ -16,6 +16,8 @@ const Divider = ({ section, left, right }) => {
             {section === 'hero' && (
                 <Linkbox />
             )}
+        
+
 
             {section === 'projects' && (
                 <div className={styles.navigation}>

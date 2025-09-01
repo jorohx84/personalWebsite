@@ -15,7 +15,7 @@ const Header = () => {
         <section className={`${styles.headerSection} ${burgerOpen && window.innerWidth < 580 ? styles.whiteHeader : ''} `}>
             <div className={`${styles.content} screenPadding`}>
                 <div className={styles.logo}>
-                    <a href=""><img src="./logo/logo.svg" alt="" /></a>
+                    <a href="/"><img src="./logo/logo.svg" alt="" /></a>
                 </div>
                 <nav>
                     <HashLink smooth to="/#aboutme">{t('header.aboutme')}</HashLink>

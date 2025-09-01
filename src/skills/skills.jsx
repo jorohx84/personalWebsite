@@ -304,7 +304,8 @@ const Skills = () => {
 
                 {/* </div> */}
             </div>
-            <Divider section="skills" left="66%" />
+            {/* <Divider section="skills" left="66%" /> */}
+              <Divider />
         </section>
 
 

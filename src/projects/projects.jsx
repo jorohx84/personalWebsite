@@ -219,6 +219,7 @@ const Projects = () => {
 
             </div>
             {/* <Divider section="projects" left="166%" /> */}
+              <Divider />
         </section>
 
     );

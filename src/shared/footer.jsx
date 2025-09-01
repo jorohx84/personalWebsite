@@ -10,19 +10,25 @@ const Footer = () => {
     return (
         <section className={styles.footerSection}>
             <Divider section='footer' left='100%' right='5%' />
-           <div className={`${styles.content} screenPadding`}>
+            <div className={`${styles.content} screenPadding`}>
                 <div className={styles.personalData}>
-                    <p>© 2025 Johannes Roth</p>
-                    <div className={styles.adress}>
-                        <p>Frontend Deveolper</p>
-                        <span>-</span>
-                        <p>Max-Seither-Ring 32</p>
-                        <span>-</span>
-                        <p>76863 </p>
-                        <span>-</span>
-                        <p>Herxheim</p>
+                    <div className={styles.adressContainer}>
+                        <p>© 2025 Johannes Roth</p>
+                        <p>Frontend Developer</p>
+                        <div className={styles.adress}>
+                            <p>Max-Seither-Ring 32</p>
+                            <span>-</span>
+                            <p>76863 </p>
+                            <span>-</span>
+                            <p>Herxheim</p>
+                        </div>
+
+
                     </div>
-                    <Linkbox />
+                    <div className={styles.linkbox}>
+                        <Linkbox />
+                    </div>
+
                 </div>
                 <div className={styles.navigations}>
                     <div className={styles.legalLinks}>

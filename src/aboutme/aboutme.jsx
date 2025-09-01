@@ -69,7 +69,7 @@ const Aboutme = () => {
 
                     </div>
                 </div>
-                
+
                 <div className={styles.btnContainer}>
                     <div className="btnBack">
                         <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
@@ -77,7 +77,7 @@ const Aboutme = () => {
 
                 </div>
             </div>
-
+            <Divider />
         </section>
     );
 }

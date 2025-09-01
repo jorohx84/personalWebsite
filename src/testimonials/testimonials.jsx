@@ -4,6 +4,8 @@ import def from "ajv/dist/vocabularies/discriminator";
 import { useTranslation } from "../services/useTranslation";
 import Headline from "../shared/headline";
 import { use } from "react";
+import Divider from "../shared/divider";
+
 const Testimonials = () => {
     const { t } = useTranslation('de');
     const [isView, setisView] = useState(null);
@@ -22,7 +24,7 @@ const Testimonials = () => {
                 setisView(index);
                 console.log(index);
 
-            } else if ( firstCardRect.top> trigger) {
+            } else if (firstCardRect.top > trigger) {
                 setisView(null)
             }
         }
@@ -90,6 +92,7 @@ const Testimonials = () => {
                 </div>
 
             </div>
+            <Divider />
         </section>
     );
 }

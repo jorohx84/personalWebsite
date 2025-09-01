@@ -19,6 +19,7 @@ a {
 .content {
 
     width: 100%;
+    height: 100%;
     max-width: 2160px;
     display: flex;
     justify-content: space-between;
@@ -32,7 +33,11 @@ a {
     justify-content: space-between;
     gap: 16px;
 }
-
+.adressContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 .adress {
     display: flex;
     gap: 8px;
@@ -78,11 +83,22 @@ a {
 
 }
 
+.linkbox {
+    margin-top: 16px;
+}
+
 @media(max-width: 1050px) {
+
+    .footerSection {
+        position: relative;
+        gap: 0;
+    }
+
     .content {
         flex-direction: column;
         align-items: center;
-        gap: 16px;
+        gap: 32px;
+
     }
 
     .navigations {
@@ -92,7 +108,18 @@ a {
     }
 
     .personalData {
+        flex-direction: column-reverse;
         align-items: center;
+    }
+
+    .linkbox{
+    margin-bottom: 20px;
+    }
+    .adressContainer{
+        align-items: center;
+    }
+    .legalLinks{
+        margin-top: 16px;
     }
 
 }
@@ -112,8 +139,7 @@ a {
     }
 
     .legalLinks {
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 16px;
+
+        gap: 24px;
     }
 }
