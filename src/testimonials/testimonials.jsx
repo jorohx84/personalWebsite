@@ -11,10 +11,7 @@ const Testimonials = () => {
     const [isView, setisView] = useState(null);
 
     const changeImage = () => {
-        console.log('Hallo');
-
         const cards = document.getElementsByClassName('card');
-        console.log(cards);
         for (let index = 0; index < cards.length; index++) {
             const card = cards[index];
             const trigger = window.innerHeight * 0.5;
@@ -22,7 +19,6 @@ const Testimonials = () => {
             const firstCardRect = cards[0].getBoundingClientRect();
             if (cardRect.top < trigger) {
                 setisView(index);
-                console.log(index);
 
             } else if (firstCardRect.top > trigger) {
                 setisView(null)

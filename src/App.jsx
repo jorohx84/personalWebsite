@@ -14,7 +14,7 @@ function App() {
     <TranslationProvider>
       <Router>
         <div className='mainContent'>
-          <div className='placeholder'></div>
+          
           <Header />
           <Routes>
             <Route path='/' element={<Main />} />

@@ -6,7 +6,7 @@
     justify-content: space-between;
     align-items: center;
     gap: 112px;
-   
+
 
 }
 
@@ -27,17 +27,24 @@
 
 .skillContainer {
     width: 100%;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: clamp(56px, 4vw, 112px)
+    gap: clamp(96px, 10vw, 200px);
+
 }
 
 .skillIconsContainer {
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: flex-start;
+
+    justify-content: space-between;
     align-items: flex-start;
-    gap: clamp(56px, 8vw, 224px)
+
+    gap: clamp(56px, 8vw, 224px);
+
+
 }
 
 
@@ -50,30 +57,178 @@
     gap: 32px;
 }
 
-.skillIcons {
-    width: fit-content;
-    height: fit-content;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
 
-    >div {
-        max-height: fit-content;
+
+.methodsContainer {
+    width: 100%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: clamp(32px, 5vw, 112px);
+    >h1{
+text-align: center;
     }
+}
+
+.methodsContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
 
 }
 
+.methodCard {
+    background-color: var(--main);
+    width: 100%;
+    max-width: 500px;
+    height: clamp(360px, calc(600px - 10vw), 460px);
+    color: var(--back);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 32px;
+    text-align: center;
 
+    >img {
+        width: clamp(40px, 1vw, 70px);
+    }
+
+
+}
+
+.flipCard {
+    perspective: 1000px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    transition: left 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
+
+    >img {
+        width: 35%;
+    }
+
+    &:nth-child(1) {
+        top: 30%;
+        left: 40%;
+    }
+
+    &:nth-child(2) {
+        top: 30%;
+        left: 85%;
+    }
+
+    &:nth-child(3) {
+        top: 10%;
+        left: 10%;
+    }
+
+    &:nth-child(4) {
+        top: 10%;
+        left: 65%;
+    }
+
+    &:nth-child(5) {
+        top: 80%;
+        left: 20%;
+    }
+
+    &:nth-child(6) {
+        top: 80%;
+        left: 80%;
+    }
+
+    &:nth-child(7) {
+        top: 50%;
+        left: 10%;
+    }
+
+    &:nth-child(8) {
+        top: 80%;
+        left: 50%;
+    }
+
+
+    cursor: pointer;
+
+    .flipCardInner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s ease-in-out;
+        transform-style: preserve-3d;
+        box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+        border-radius: 6px;
+    }
+
+    &:hover .flipCardInner {
+        transform: rotateY(180deg);
+    }
+
+    .flipCardFront,
+    .flipCardBack {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 6px;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+
+
+    }
+
+    .flipCardFront {
+        gap: 24px;
+
+        >h3 {
+            font-size: clamp(1rem, 1vw, 1.2rem);
+        }
+
+        >img {
+            width: 45%;
+        }
+    }
+
+    .flipCardBack {
+        transform: rotateY(180deg);
+
+
+        >span {
+            text-align: start;
+            font-size: clamp(0.7rem, 5vw, 1.2rem);
+            font-weight: 600;
+        }
+
+        >img {
+            width: 45%;
+        }
+    }
+}
 
 // test
 
+
 .skillflowContainer {
     width: 100%;
-    max-width: 800px;
+    max-width: 900px;
     // height: clamp(50px, 30vw, 620px);
     aspect-ratio: 2/1;
     position: relative;
-    margin-top: clamp(0px, calc(100px - 7vw), 100px);
+    // margin-top: clamp(0px, calc(100px - 7vw), 100px);
 
     >span {
         font-size: clamp(32px, 2vw, 56px);
@@ -88,7 +243,7 @@
     justify-content: center;
     align-items: center;
     box-shadow: var(--shadow);
-    border-radius: 10px;
+    border-radius: 6px;
     background-color: white;
     width: 50px;
     height: 50px;
@@ -139,271 +294,108 @@
     }
 }
 
-.skillTitle {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transition: top 0.8s ease-in-out, left 0.8s ease-in-out, transform 0.8s ease-in-out, width 0.8s ease-in-out, height 0.8s ease-in-out;
-}
-
-.movetitle {
-    opacity: 0;
-
-
-}
 
 .move1 {
-    left: 8px !important;
+
+    left: calc(var(--gap)/2) !important;
     top: 0 !important;
 
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move2 {
-    left: calc(25% + 8px) !important;
+    left: calc(25% + calc(var(--gap)/2)) !important;
     top: 0 !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move3 {
-    left: calc(50% + 8px) !important;
+    left: calc(50% + calc(var(--gap)/2)) !important;
     top: 0 !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move4 {
-    left: calc(75% + 8px) !important;
+    left: calc(75% + calc(var(--gap)/2)) !important;
     top: 0 !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move5 {
-    left: 8px !important;
+    left: calc(var(--gap)/2) !important;
     top: 50% !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move6 {
-    left: calc(25% + 8px) !important;
+    left: calc(25% + calc(var(--gap)/2)) !important;
     top: 50% !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move7 {
-    left: calc(50% + 8px) !important;
+    left: calc(50% + calc(var(--gap)/2)) !important;
     top: 50% !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 .move8 {
-    left: calc(75% + 8px) !important;
+    left: calc(75% + calc(var(--gap)/2)) !important;
     top: 50% !important;
-    width: calc(100%/4 - 16px) !important;
-    height: calc(100%/2 - 16px) !important;
+    width: calc(100%/4 - var(--gap)) !important;
+    height: calc(100%/2 - var(--gap)) !important;
 }
 
 
 
 
-//test
-
-.flipCard {
 
 
-    //   height: clamp(100px, 10vw, 180px);
-
-    perspective: 1000px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background-color: white;
-    width: 40px;
-    height: 40px;
-    transition: left 1s ease-in-out, top 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out;
-
-    >img {
-        width: 45%;
-    }
-
-    &:nth-child(1) {
-        top: 40%;
-        left: 80%;
-    }
-
-    &:nth-child(2) {
-        top: 10%;
-        left: 60%;
-    }
-
-    &:nth-child(3) {
-        top: 20%;
-        left: 20%;
-    }
-
-    &:nth-child(4) {
-        top: 10%;
-        left: 90%;
-    }
-
-    &:nth-child(5) {
-        top: 80%;
-        left: 20%;
-    }
-
-    &:nth-child(6) {
-        top: 80%;
-        left: 80%;
-    }
-
-    &:nth-child(7) {
-        top: 60%;
-        left: 10%;
-    }
-
-    &:nth-child(8) {
-        top: 80%;
-        left: 50%;
-    }
-
-    cursor: pointer;
-
-    .flipCardInner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.6s ease-in-out;
-        transform-style: preserve-3d;
-        box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
-        border-radius: 6px;
-    }
-
-    &:hover .flipCardInner {
-        transform: rotateY(180deg);
-    }
-
-    .flipCardFront,
-    .flipCardBack {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        border-radius: 6px;
-        backface-visibility: hidden; // verhindert das Flackern
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: white; // Weißer Hintergrund auf beiden Seiten
-    }
-
-    .flipCardFront {
-        gap: 10px;
-
-        >img {
-            width: 45%;
-        }
-    }
-
-    .flipCardBack {
-        transform: rotateY(180deg);
-
-        >span {
-            text-align: center;
-            font-size: clamp(0.7rem, 1.3vw, 1.2rem);
-            font-weight: 600;
-        }
-    }
-}
-
-.methodContainer {
-    width: 100%;
-    max-width: 700px;
-    display: flex;
-    flex-direction: column;
-
-    align-items: flex-start;
-    height: 100%;
-    gap: 32px;
-}
-
-.methodCards {
-    width: 100%;
-
-    display: flex;
-
-    justify-content: flex-start;
-    align-items: center;
-    gap: 24px;
-
-}
-
-.methodCard {
-    width: 130px;
-    height: 100px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 16px;
-    background-color: var(--main);
-    border: solid 1px var(--dark);
-    border-radius: 10px;
-    // background-color: var(--dark);
-    color: white;
-
-
-}
 
 .learningProgress {
     width: 100%;
-    max-width: clamp(500px, 20vw, 700px);
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    // box-shadow: var(--shadow);
-    // padding: 16px 64px;
+    align-items: flex-end;
+    box-shadow: var(--shadow);
+    padding: 32px 64px;
     border-radius: 10px;
 
 
 }
-
-
 
 .learningProgressContainer {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: clamp(18px, 2vw, 48px);
 
     >h2 {
         width: 100%;
-        text-align: start;
-        border-bottom: solid var(--dark);
+        text-align: center;
+        background-color: var(--back);
         box-sizing: border-box;
-        padding: 4px;
+        padding: 16px;
+        border-radius: 8px;
     }
 }
 
 .learningProgressInner {
-    display: flex;
-    justify-content: flex-start;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    align-items: center;
     gap: clamp(32px, 7vw, 56px)
 }
 
@@ -419,6 +411,10 @@
         color: var(--dark);
         font-weight: 400;
     }
+
+    >img {
+        width: clamp(30px, 2vw, 70px);
+    }
 }
 
 svg {
@@ -433,144 +429,24 @@ svg {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .subHeadline {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-
-//     >h4 {
-//         border: solid;
-//         padding: 8px 24px;
-//         border-radius: 10px;
-
-//     }
-
-//     >div {
-//         flex: 1;
-//         height: 1px;
-//         background-color: var(--dark);
-//     }
-
-//     >img {}
-// }
-
-
-
-
-
-// .stackContainer{
-//     width: 100%;
-//     display: flex;
-//     flex-direction: column;
-//     gap: 32px;
-// }
-
-
-// .skillsOverview{
-//     width: 100%;
-//    display: grid;
-//    grid-template-columns: repeat(2,1fr);
-
-//     column-gap: 112px;
-//     row-gap: 8px;
-// }
-
-// .skill{
-//     width: 100%;
-//     display: flex;
-
-//     align-items: center;
-//     gap: 16px;
-//     >img{
-//         width: clamp(20px, 2vw, 30px);
-
-//         padding: clamp(4px, 2vw , 16px);
-//         border-radius: 8px;
-//        box-shadow: var(--shadow);
-//     }
-// }
-
-// .skillInfos{
-//     width: 100%;
-//     display: flex;
-//     justify-content: space-between;
-// }
-
-// .beamContainer{
-//     display: flex;
-//     flex-direction: column;
-//     gap:6px;
-//     width: 100%;
-// }
-
-// .skillBeam{
-//     width: 100%;
-//     height: 8px;
-//     background-color: var(--back);
-//     border-radius: 100px;
-//     position: relative;
-//     >div{
-//         height: 100%;
-//         border-radius: 100px;
-//         background-color: var(--main);
-//     }
-//     >span{
-//         position: absolute;
-
-//         right: 0;
-//     }
-// }
-
-
-
 @media(max-width: 1150px) {
 
     .skillContainer {
+        flex-direction: column;
         align-items: center;
     }
 
     .skillIconsContainer {
         flex-direction: column;
         align-items: center;
+    }
+
+    .skillIconsContainer.reverse> :nth-child(1) {
+        order: 2;
+    }
+
+    .skillIconsContainer.reverse> :nth-child(2) {
+        order: 1;
     }
 
     .skillIcons {
@@ -581,10 +457,7 @@ svg {
         align-items: center;
     }
 
-    .learningProgress {
-        max-width: unset;
-        width: fit-content;
-    }
+
 
     .learningProgressContainer {
         align-items: center;
@@ -599,7 +472,14 @@ svg {
         justify-content: center;
     }
 
+    .methodsContent {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    .methodCard {
+        height: clamp(360px, calc(600px - 40vw), 400px);
+    }
 }
 
 @media(max-width: 1000px) {
@@ -617,6 +497,17 @@ svg {
 
 }
 
+@media(max-width: 850px) {
+    .methodsContent {
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 850px) {
+    .learningProgressInner {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
 
 @media(max-width: 600px) {
     .learningProgress {
@@ -628,4 +519,6 @@ svg {
             text-align: center;
         }
     }
+
+
 }

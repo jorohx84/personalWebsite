@@ -74,13 +74,18 @@ const Skills = () => {
         // },
     ];
 
+    const methodicons = [
+        './icons/git.svg',
+        './icons/kanban.svg',
+        './icons/scrum.svg',
+    ]
 
 
     const [inView, setinView] = useState(false);
     const changePosition = () => {
         const ref = document.getElementById('flow');
         const rect = ref.getBoundingClientRect();
-        const trigger = window.innerWidth < 750 ? 0.6 : 0.25;
+        const trigger = window.innerWidth < 750 ? 0.6 : 0.3;
         const windowHeight = window.innerHeight * trigger;
         const viewState = rect.top < windowHeight ? true : false;
         console.log(windowHeight);
@@ -97,79 +102,28 @@ const Skills = () => {
         };
     }, []);
 
-    const methods = [
-        {
-            path: '',
-            name: 'GIT',
-
-        },
-        {
-            path: '',
-            name: 'SCRUM',
-
-        },
-        {
-            path: '',
-            name: 'KANBAN',
-
-        },
-    ]
+    const methods = t('skills.methods');
 
     return (
         <section className={styles.skillsSection} id="skills">
             <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('skills.headline')} />
-                {/* <div className={styles.skillContainer}> */}
-                {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor, sunt expedita, dolorem dolorum dicta, officiis sit ut possimus sed harum praesentium.</p> */}
                 <div className={styles.skillContainer}>
-
-
 
 
 
                     <div className={styles.skillIconsContainer}>
                         <div className={styles.textContainer}>
                             <h2>{t('skills.textHeadline')}</h2>
-                            <p>{t('skills.text')}</p>
-
-
-
-                            {/* 
-                            <div className={styles.methodContainer}>
-                                <h2>Softskills</h2>
-                                <div className={styles.methodCards}>
-                                    {methods.map((method, index) => (
-                                        <div key={index}>
-                                            <div className={styles.methodCard}>
-                                                <h3>{method.name}</h3>
-                                            </div>
-                                        </div>
-                                    ))}
-
-                                </div>
-
-
-                            </div> */}
-
-
-
-
+                            <p>{t('skills.frontendText')}</p>
 
 
                         </div>
-
-
 
                         <div className={styles.skillflowContainer} id="flow">
-                            {/* <span className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>STACK</span> */}
-                            {skills.map((skill, index) => (
-                                <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
-                                    <img src={skill.path} alt="" />
-                                </div>
-                            ))}
-                        </div>
-                        {/* <div className={styles.skillflowContainer} id="flow">
-                            <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>STACK</h1>
+
+
+
                             {skills.map((skill, index) => (
                                 <div className={`${styles.flipCard} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
                                     <div className={styles.flipCardInner}>
@@ -183,35 +137,23 @@ const Skills = () => {
 
                                 </div>
                             ))}
-                        </div> */}
+                        </div>
 
                     </div>
 
 
 
-                    {/* <div className={styles.skillflowContainer} id="flow">
-                        <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>Skills</h1>
-                        {skills.map((skill, index) => (
-                            <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
-                                <img src={skill.path} alt="" />
-                            </div>
-                        ))}
-                    </div> */}
 
 
 
-
-
-
-
-                    <div className={styles.skillIconsContainer}>
-
+                    <div className={`${styles.skillIconsContainer} ${styles.reverse}`}>
                         <div className={styles.learningProgress}>
                             <div className={styles.learningProgressContainer}>
-                                <h2>{t('skills.subHeadline')}</h2>
+
                                 <div className={styles.learningProgressInner}>
 
                                     <div className={styles.progressContainer}>
+                                          <img src="./icons/python.svg" alt="" />
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
@@ -221,6 +163,7 @@ const Skills = () => {
                                     </div>
 
                                     <div className={styles.progressContainer}>
+                                           <img src="./icons/django.svg" alt="" />
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
@@ -229,83 +172,63 @@ const Skills = () => {
 
                                         <span>Django</span>
                                     </div>
+                                    <div className={styles.progressContainer}>
+                                        <img src="./icons/database.svg" alt="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 15} transform="rotate(-90 60 60)" />
+                                            <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">15%</text>
+                                        </svg>
+
+                                        <span>SQLite</span>
+                                    </div>
+                                    <div className={styles.progressContainer}>
+                                         <img src="./icons/docker.svg" alt="" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
+                                            <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 5} transform="rotate(-90 60 60)" />
+                                            <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">5%</text>
+                                        </svg>
+
+                                        <span>Docker</span>
+                                    </div>
 
                                 </div>
                             </div>
                         </div>
 
+                        <div className={styles.textContainer}>
+                            <h2>{t('skills.subHeadline')}</h2>
+                            <p>{t('skills.backendText')}</p>
 
-                        {/* 
-                        <div className={styles.skillIcons}>
-                            {skills.map((icon, index) => (
-                                <div key={index}>
-                                    <div className={styles.flipCard} id="skillIcon${index}">
-                                        <div className={styles.flipCardInner}>
-                                            <div className={styles.flipCardFront}>
-                                                <img src={icon.path} alt="" />
-                                            </div>
-                                            <div className={styles.flipCardBack}>
-                                                <span>{icon.name}</span>
-                                            </div>
+
+                        </div>
+
+                    </div>
+                    <div className={styles.skillIconsContainer}>
+
+                        <div className={styles.methodsContainer}>
+                            <h1>{t('skills.methodsHeadline')}</h1>
+                            <div className={styles.methodsContent}>
+                                {methods.map((method, index) => (
+                                    <div key={index}>
+                                        <div className={styles.methodCard}>
+                                            <img src={methodicons[index]} alt="" />
+                                            <h3>{method.name}</h3>
+                                            <p>{method.text}</p>
                                         </div>
                                     </div>
-                                </div>
-                            ))}
 
-                        </div> */}
-
-
-
-
-
+                                ))}
+                            </div>
+                        </div>
 
                     </div>
 
-                    {/* <div className={styles.skillflowContainer} id="flow">
-                        <h1 className={`${styles.skillTitle} ${inView ? styles.movetitle : ''}`}>Skills</h1>
-                        {skills.map((skill, index) => (
-                            <div className={`${styles.skilldot} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
-                                <img src={skill.path} alt="" />
-                            </div>
-                        ))}
-                    </div> */}
-
-
                 </div>
 
-
-
-                {/* <div className={styles.stackContainer}>
-                     
-                        <div className={styles.skillsOverview}>
-
-
-                            {skills.map((skill, index) => (
-                                <div key={index}>
-                                    <div className={styles.skill}>
-                                        <img src={skill.path} alt="" />
-                                        <div className={styles.beamContainer}>
-                                            <div className={styles.skillInfos}>
-                                                <p>{skill.name}</p>
-                                                <span>{skill.exp}</span>
-                                            </div>
-
-                                            <div className={styles.skillBeam}>
-                                                <div style={{ width: skill.exp }}></div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div> */}
-
-
-                {/* </div> */}
             </div>
-            {/* <Divider section="skills" left="66%" /> */}
-              <Divider />
+            <Divider />
         </section>
 
 

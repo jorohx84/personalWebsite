@@ -10,7 +10,7 @@ const Privacy = () => {
     }, []);
     return (
         <section className={`${styles.legalSection} screenPadding`}>
-            <div className={styles.content}>
+            <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('privacy.h1')} />
                 <div className={styles.textContainer}>
 

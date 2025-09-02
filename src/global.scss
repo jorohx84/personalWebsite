@@ -5,7 +5,8 @@
     --dark: #022f40;
     --back: #EEEEEE;
     --shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
-    --transparent: rgba(255, 255, 255, 0.697)
+    --transparent: rgba(255, 255, 255, 0.697);
+    --gap: 24px;
 }
 
 @font-face {
@@ -75,7 +76,7 @@ h2 {
 
 h3 {
     margin: 0;
-    font-size: clamp(1.2rem, 2vw, 1.4rem);
+    font-size: clamp(1rem, 2vw, 1.2rem);
 }
 
 h4 {
@@ -102,7 +103,8 @@ button {
 .btnBack {
     position: relative;
     width: clamp(140px, 8vw, 160px);
-    aspect-ratio: 1/0.375;
+    // aspect-ratio: 1/0.375;
+    height: 50px;
     border-radius: 10px;
     background-color: var(--back);
     transition: transform 0.2s ease-in-out;
@@ -133,7 +135,7 @@ button {
 }
 
 .screenMargin {
-    margin-top: clamp(112px, 8vw, 172px);
+    margin-top: 112px;
 }
 
 .placeholder {
@@ -152,8 +154,6 @@ button {
 
 
 
-
-
 // @media(max-width:1000px) {
 //     button {
 //         width: 160px;
@@ -167,11 +167,22 @@ button {
 //     }
 // }
 
+@media(max-width: 850px) {
+    .screenMargin {
+        margin-top: 96px;
+    }
+}
 
 @media(max-width: 750px) {
 
     .placeholder {
         height: 80px;
+    }
+}
+
+@media(max-width: 600px) {
+    :root {
+        --gap: 16px;
     }
 }
 

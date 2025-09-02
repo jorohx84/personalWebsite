@@ -11,7 +11,7 @@ const Imprint = () => {
     }, []);
     return (
         <section className={`${styles.legalSection} screenPadding`}>
-            <div className={styles.content}>
+            <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('imprint.h1')} />
                 <div className={styles.textContainer}>
 

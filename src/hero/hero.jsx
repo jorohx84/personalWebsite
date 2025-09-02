@@ -37,38 +37,43 @@ const Hero = () => {
     return (
         <section className={styles.heroSection}>
             <div className={styles.heroContainer}>
-                <div className={styles.title}>
-                    <p>Johannes Roth</p>
-                    <div className={styles.word}>
+                <div className={styles.heroContainerInner}>
 
-                        {firstLetters.map((letter, index) => (
-                            <div key={index}>
-                                <span onMouseOver={() => toggleLetter(index, 'first')}>{firstWordState[index] ? letter.toLocaleLowerCase() : letter.toUpperCase()}</span>
-                            </div>
-                        ))}
-                    </div>
 
-                    <div className={`${styles.word} ${styles.margin}`}>
-                        {secondLetters.map((letter, index) => (
-                            <div key={index}>
-                                <span onMouseOver={() => toggleLetter(index, 'second')}>{secondWordState[index] ? letter.toLocaleLowerCase() : letter.toUpperCase()}</span>
+                    <div className={styles.title}>
+                        <p>Johannes Roth</p>
+                        <div className={styles.word}>
+
+                            {firstLetters.map((letter, index) => (
+                                <div key={index}>
+                                    <span onMouseOver={() => toggleLetter(index, 'first')}>{firstWordState[index] ? letter.toLocaleLowerCase() : letter.toUpperCase()}</span>
+                                </div>
+                            ))}
+                        </div>
+
+                        <div className={`${styles.word} ${styles.margin}`}>
+                            {secondLetters.map((letter, index) => (
+                                <div key={index}>
+                                    <span onMouseOver={() => toggleLetter(index, 'second')}>{secondWordState[index] ? letter.toLocaleLowerCase() : letter.toUpperCase()}</span>
+                                </div>
+                            ))}
+                        </div>
+                        <div className={styles.btnContainer}>
+                            <div className="btnBack">
+                                <button onClick={() => window.location.href = '#aboutme'}>{t('hero.button')}</button>
                             </div>
-                        ))}
-                    </div>
-                    <div className={styles.btnContainer}>
-                        <div className="btnBack">
-                            <button onClick={() => window.location.href = '#aboutme'}>{t('hero.button')}</button>
+
                         </div>
 
                     </div>
-
+                    <img className={styles.portrait} src="./img/portrait2.webp" alt="portraitfoto" />
                 </div>
-                <img className={styles.portrait} src="./img/portrait2.webp" alt="portraitfoto" />
+                <div className={styles.divider}>
+                    <Divider section="hero" />
+                </div>
             </div>
 
-            <div className={styles.divider}>
-                <Divider section="hero" />
-            </div>
+
 
         </section>
 

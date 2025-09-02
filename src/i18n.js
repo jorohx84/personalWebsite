@@ -40,8 +40,25 @@ export const translations = {
         skills: {
             headline: 'FÄHIGKEITEN',
             textHeadline: 'Modernes Webdevelopment mit agilem Mindset',
-            text: 'Als Frontend-Entwickler mit fundierter Ausbildung in modernen Webtechnologien baue ich nutzerfreundliche und zukunftsorientierte Anwendungen. Aktuell erweitere ich meine Kompetenzen gezielt durch eine Weiterbildung zum Fullstack-Entwickler mit Python und Django, um Projekte ganzheitlich umsetzen zu können. Durch meine Erfahrung mit agilen Methoden wie Scrum und Kanban sowie den Einsatz von Tools wie Trello und Git arbeite ich strukturiert, effizient und teamorientiert. Mein Ziel ist es, innovative Lösungen zu entwickeln, die sowohl technisch als auch für den Endnutzer überzeugen.',
-            subHeadline: 'Auf dem Weg zum Fullstack Entwickler',
+            frontendText: 'Als Frontend-Entwickler mit fundierter Ausbildung in modernen Webtechnologien gestalte ich nutzerzentrierte und performante Anwendungen. Dabei lege ich besonderen Wert auf klare Strukturen, durchdachte User Interfaces und sauberen, wartbaren Code. Meine technische Basis umfasst Frameworks wie React sowie den gezielten Einsatz von SCSS, CSS-Variablen und responsivem Design. In agilen Projekten arbeite ich mit Methoden wie Scrum oder Kanban und setze Tools wie Git und Trello zur transparenten und effizienten Zusammenarbeit ein. Mein Ziel ist es, Erlebnisse zu schaffen, die nicht nur funktional, sondern auch visuell und in der Bedienung überzeugen.',
+            backendText: 'Aktuell erweitere ich meine Kenntnisse als Webentwickler durch eine gezielte Weiterbildung zum Fullstack-Entwickler mit Fokus auf Python und Django. Damit baue ich meine Fähigkeit aus, auch serverseitige Logiken, APIs und Datenbankanbindungen eigenständig umzusetzen. Dabei kommen relationale Datenbanken wie SQLite zum Einsatz, ebenso wie Konzepte der REST-Architektur. Mein Verständnis für strukturierte Codearchitektur, saubere Schnittstellen und sicherheitsrelevante Aspekte ermöglicht es mir, Webanwendungen ganzheitlich zu entwickeln. Unterstützt durch moderne Tools wie Git und agile Methoden wie Scrum und Kanban, arbeite ich effizient, strukturiert und immer lösungsorientiert im Team.',
+            subHeadline:'Auf dem Weg zum Fullstack Entwickler',
+            methodsHeadline: 'Agiles Projektmanagement',
+            methods: [
+                {
+                    name: 'Git',
+                    text: 'Versionskontrolle ist ein zentraler Bestandteil meiner täglichen Arbeit. Ob im Team oder eigenverantwortlich – ich nutze Git sicher und effizient: von Feature-Branches über das Lösen von Merge-Konflikten bis hin zu sauberen, dokumentierten Pull Requests. So bleibt der Code nachvollziehbar, strukturiert und wartbar.'
+                },
+                {
+                    name: 'Kanban',
+                    text: 'Kanban unterstützt meine strukturierte und selbstorganisierte Arbeitsweise. Durch die Visualisierung von Aufgaben, frühzeitige Erkennung von Blockern und die kontinuierliche Optimierung des Workflows behalte ich stets den Überblick und arbeite fokussiert – sowohl im Team als auch eigenständig.'
+                },
+                {
+                    name: 'Scrum',
+                    text: 'Scrum hat mein Vorgehen in komplexen Projekten maßgeblich geprägt. Ich schätze die klare Struktur mit Sprint-Planung, Daily Stand-ups und Retrospektiven. Iteratives Arbeiten hilft mir, zuverlässig zu liefern, flexibel auf Feedback zu reagieren und Erwartungen im Team sowie bei Stakeholdern zu erfüllen.'
+                }
+            ]
+
         },
         projects: {
             headline: 'PROJEKTE',
@@ -151,7 +168,7 @@ export const translations = {
 
         footer: {
             legal: 'Impressum',
-            privacy:'Datenschutz',
+            privacy: 'Datenschutz',
         }
     },
 
@@ -192,8 +209,26 @@ export const translations = {
         skills: {
             headline: 'SKILLS',
             textHeadline: 'Modern Web Development with an Agile Mindset',
-            text: 'As a frontend developer with a solid background in modern web technologies, I create user-friendly and future-oriented applications. I am currently expanding my expertise through advanced training as a fullstack developer with Python and Django, enabling me to deliver complete end-to-end solutions. With experience in agile methodologies such as Scrum and Kanban, and the use of collaboration tools like Trello and Git, I work in a structured, efficient, and team-oriented way. My goal is to develop innovative solutions that excel both technically and in terms of user experience.',
+            frontendText: 'As a frontend developer with a strong foundation in modern web technologies, I create user-centered and high-performance applications. I place particular emphasis on clear structures, thoughtful user interfaces, and clean, maintainable code. My technical skillset includes frameworks like React as well as the use of SCSS, CSS variables, and responsive design principles. In agile projects, I work with methods such as Scrum and Kanban and rely on tools like Git and Trello for transparent and efficient collaboration. My goal is to craft digital experiences that are not only functional, but also visually appealing and intuitive to use.',
+            backendText: 'I am currently expanding my skills as a web developer through targeted training to become a full-stack developer with a focus on Python and Django. This enables me to independently implement backend logic, APIs, and database integration. I work with relational databases such as SQLite and apply concepts of REST architecture to build robust server-side applications. My understanding of structured code architecture, clean interfaces, and security best practices allows me to develop web solutions end-to-end. Supported by modern tools like Git and agile methodologies such as Scrum and Kanban, I contribute to efficient, structured, and solution-oriented teamwork.',
+
             subHeadline: 'On the way to full-stack developer',
+            methodsHeadline: 'Agile project management',
+            methods: [
+                {
+                    name: 'Git',
+                    text: 'Version control is a core part of how I work. Whether collaborating in a team or managing features independently, I use Git confidently – from feature branching to resolving merge conflicts and submitting clean, well-documented pull requests. It helps me keep codebases organized, traceable, and easy to maintain.'
+                },
+                {
+                    name: 'Kanban',
+                    text: 'Kanban supports my ability to work in a structured and self-driven way. By visualizing tasks, identifying blockers early, and optimizing flow, I can maintain focus on priorities and deliver consistently. I regularly use Kanban boards to stay on top of work in both solo and team settings.'
+                },
+                {
+                    name: 'Scrum',
+                    text: 'Scrum has shaped the way I approach complex projects. I value the structure it brings through sprint planning, daily stand-ups, and retrospectives. Working in time-boxed iterations helps me deliver reliable outcomes, adapt to feedback, and stay aligned with team and stakeholder expectations.'
+                }
+            ]
+
         },
         projects: {
             headline: 'PROJECTS',
@@ -298,9 +333,9 @@ export const translations = {
 
             }
         },
-           footer: {
+        footer: {
             legal: 'legal notice',
-            privacy:'privacy police',
+            privacy: 'privacy police',
         }
     }
 

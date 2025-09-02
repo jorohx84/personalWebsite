@@ -5,6 +5,7 @@ import { useTranslation } from '../services/useTranslation';
 import Divider from "../shared/divider";
 const Aboutme = () => {
     const [inView, setinView] = useState(false);
+    const [flip, setflip] = useState(null);
     const { t } = useTranslation('de');
     const softskills = t('about.softskills');
     const softskillsImages = [
@@ -23,12 +24,33 @@ const Aboutme = () => {
 
     }
 
+
+    const flipCards = () => {
+
+        const flipCards = document.getElementsByClassName('flip');
+        console.log(flipCards);
+        const trigger = window.innerHeight * 0.5;
+        for (let index = 0; index < flipCards.length; index++) {
+            const flipCard = flipCards[index];
+            const rect = flipCard.getBoundingClientRect();
+            if (rect.top < trigger) {
+                setflip(index);
+            }
+
+        }
+    }
+
     useEffect(() => {
-        window.addEventListener("scroll", giveHghlights);
+        const onScroll = () => {
+            giveHghlights();
+            flipCards();
+        };
+
+        window.addEventListener("scroll", onScroll);
         window.addEventListener("load", giveHghlights);
 
         return () => {
-            window.removeEventListener("scroll", giveHghlights);
+            window.removeEventListener("scroll", onScroll);
             window.removeEventListener("load", giveHghlights);
         };
     }, []);
@@ -46,36 +68,67 @@ const Aboutme = () => {
                             <p>{t('about.text')}</p>
                         </div>
 
-                        {/* <div className={styles.btnContainer}>
-                            <div className="btnBack">
-                                <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
-                            </div>
-
-                        </div> */}
-                    </div>
-                    <div className={styles.softskills} >
-                        {softskills.map((skill, index) => (
-                            <div key={index}>
-                                <div className={`${styles.softskillsCard} ${inView ? styles.scaleCard : ''}`}>
-                                    <div className={styles.softskillsCardTitle}>
-                                        <img src={softskillsImages[index]} alt={skill.title} />
-                                        <h3>{skill.title}</h3>
-                                    </div>
-                                    <span>{skill.description}</span>
+                        {window.innerWidth >= 1360 && (
+                            <div className={styles.btnContainer}>
+                                <div className="btnBack">
+                                    <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
                                 </div>
+
                             </div>
-                        ))}
-
-
+                        )}
                     </div>
+                    {/* {window.innerWidth < 700 && ( */}
+                        <div className={styles.softskills} >
+                            {softskills.map((skill, index) => (
+                                <div key={index}>
+                                    <div className={`${styles.softskillsCard} ${inView ? styles.scaleCard : ''}`}>
+                                        <div className={styles.softskillsCardTitle}>
+                                            <img src={softskillsImages[index]} alt={skill.title} />
+                                            <h3>{skill.title}</h3>
+                                        </div>
+                                        <span>{skill.description}</span>
+                                    </div>
+                                </div>
+                            ))}
+
+
+                        </div>
+                    {/* )} */}
+                    {/* {window.innerWidth >= 700 && (
+                        <div className={styles.softskills}>
+                            {softskills.map((skill, index) => (
+                                <div className={`${styles.flipCard} flip `} key={index} >
+                                    <div className={`${styles.flipCardInner} ${(index === flip && window.innerWidth < 500) ? styles.cardflip : ''} `}>
+                                        <div className={styles.flipCardFront}>
+                                            <img src={softskillsImages[index]} alt={skill.title} />
+                                            <h3>{skill.title}</h3>
+
+                                        </div>
+                                        <div className={styles.flipCardBack}>
+                                             <img src={softskillsImages[index]} alt={skill.title} />
+                                            <span>{skill.description}</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            ))}
+                        </div>
+
+
+                    )} */}
+
                 </div>
 
-                <div className={styles.btnContainer}>
-                    <div className="btnBack">
-                        <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
-                    </div>
 
-                </div>
+                {window.innerWidth <= 1360 && (
+                    <div className={styles.btnContainer}>
+                        <div className="btnBack">
+                            <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
+                        </div>
+
+                    </div>
+                )}
+
             </div>
             <Divider />
         </section>
