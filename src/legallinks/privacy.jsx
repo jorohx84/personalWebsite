@@ -44,7 +44,7 @@ const Privacy = () => {
                     <div>
                         <h2>{t('privacy.contact.h2')}</h2>
                         <p>{t('privacy.contact.info')}</p>
-                        <p>{t('privacy.contact.name')}</p>
+                        <b>{t('privacy.contact.name')}</b>
                         <a href='mailto:kontakt@johannes-roth.de'>
                             <img src="./icons/mail_blue.svg" alt="" />
                             <span>kontakt@johannes-roth.de</span>

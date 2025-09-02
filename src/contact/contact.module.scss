@@ -3,7 +3,8 @@
 
     display: flex;
     justify-content: center;
-   margin-bottom: 144px;
+    margin-bottom: 144px;
+    position: relative;
 
     .content {
         width: 100%;
@@ -86,13 +87,49 @@
                 justify-content: flex-start;
             }
 
-          
+
 
         }
-          .divider {
-                width: 100%;
-                margin-top: -30px;
-            }
+
+        .divider {
+            width: 100%;
+            margin-top: -30px;
+        }
+    }
+
+    .response {
+
+        padding: 32px 64px;
+        background-color: var(--transparent);
+        backdrop-filter: blur(10px);
+        box-shadow: var(--shadow);
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(100vw, -50%);
+        transition: transform 1s ease-in-out;
+    }
+}
+
+.slidin {
+    animation: slide 6s ease;
+}
+
+@keyframes slide {
+    0% {
+        transform: translate(100vw, -50%);
+    }
+
+    50% {
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+       opacity: 0;
     }
 }
 
@@ -106,7 +143,7 @@
         align-items: center;
     }
 
-    .divider{
+    .divider {
         margin-top: 100px !important;
     }
 }

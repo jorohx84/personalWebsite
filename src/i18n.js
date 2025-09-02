@@ -42,7 +42,7 @@ export const translations = {
             textHeadline: 'Modernes Webdevelopment mit agilem Mindset',
             frontendText: 'Als Frontend-Entwickler mit fundierter Ausbildung in modernen Webtechnologien gestalte ich nutzerzentrierte und performante Anwendungen. Dabei lege ich besonderen Wert auf klare Strukturen, durchdachte User Interfaces und sauberen, wartbaren Code. Meine technische Basis umfasst Frameworks wie React sowie den gezielten Einsatz von SCSS, CSS-Variablen und responsivem Design. In agilen Projekten arbeite ich mit Methoden wie Scrum oder Kanban und setze Tools wie Git und Trello zur transparenten und effizienten Zusammenarbeit ein. Mein Ziel ist es, Erlebnisse zu schaffen, die nicht nur funktional, sondern auch visuell und in der Bedienung überzeugen.',
             backendText: 'Aktuell erweitere ich meine Kenntnisse als Webentwickler durch eine gezielte Weiterbildung zum Fullstack-Entwickler mit Fokus auf Python und Django. Damit baue ich meine Fähigkeit aus, auch serverseitige Logiken, APIs und Datenbankanbindungen eigenständig umzusetzen. Dabei kommen relationale Datenbanken wie SQLite zum Einsatz, ebenso wie Konzepte der REST-Architektur. Mein Verständnis für strukturierte Codearchitektur, saubere Schnittstellen und sicherheitsrelevante Aspekte ermöglicht es mir, Webanwendungen ganzheitlich zu entwickeln. Unterstützt durch moderne Tools wie Git und agile Methoden wie Scrum und Kanban, arbeite ich effizient, strukturiert und immer lösungsorientiert im Team.',
-            subHeadline:'Auf dem Weg zum Fullstack Entwickler',
+            subHeadline: 'Auf dem Weg zum Fullstack Entwickler',
             methodsHeadline: 'Agiles Projektmanagement',
             methods: [
                 {
@@ -79,6 +79,7 @@ export const translations = {
         contact: {
             headline: 'Kontakt',
             text: 'Durchdachtes Interface Design entsteht nicht zufällig – es ist das Ergebnis von technischem Verständnis, einem Auge fürs Detail und echter Begeisterung für Webentwicklung. Wenn du jemanden suchst, der genau das mitbringt und sich schnell in neue Teams, Tools und Themen einarbeitet, dann lass uns ins Gespräch kommen. Ich freue mich auf deine Nachricht!',
+            response: 'Nachricht gesendet.',
         },
         contactform: {
             name: 'Name',
@@ -160,7 +161,7 @@ export const translations = {
             contact: {
                 h2: "Verantwortliche Stelle",
                 info: "Für Fragen zum Datenschutz können Sie sich jederzeit an mich wenden:",
-                name: "Max Mustermann",
+                name: "Johannes Roth",
                 email: "<a href='mailto:max@mustermann.dev'>max@mustermann.dev</a>",
                 phone: "<a href='tel:+491234567890'>+49 123 4567890</a>"
             }
@@ -249,6 +250,7 @@ export const translations = {
         contact: {
             headline: 'Contact',
             text: 'Effective user interfaces doesn’t happen by accident – it’s the result of technical understanding, attention to detail, and genuine passion for web development. If you’re looking for someone who brings all of that to the table and quickly adapts to new teams, tools, and topics, let’s talk. I’m looking forward to hearing from you!',
+            response: 'message send.',
         },
         contactform: {
             name: 'name',
@@ -329,7 +331,7 @@ export const translations = {
             contact: {
                 h2: "Responsible Entity",
                 info: "If you have questions regarding data protection, you can contact me at any time:",
-                name: "Max Mustermann",
+                name: "Johannes Roth",
 
             }
         },

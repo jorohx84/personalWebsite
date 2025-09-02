@@ -195,7 +195,7 @@ text-align: center;
         gap: 24px;
 
         >h3 {
-            font-size: clamp(1rem, 1vw, 1.2rem);
+            font-size: clamp(0.5rem, 0.2vw, 1.2rem);
         }
 
         >img {
@@ -209,7 +209,7 @@ text-align: center;
 
         >span {
             text-align: start;
-            font-size: clamp(0.7rem, 5vw, 1.2rem);
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
             font-weight: 600;
         }
 

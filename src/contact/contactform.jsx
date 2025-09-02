@@ -3,9 +3,9 @@ import styles from './contactform.module.scss';
 import { useForm } from "react-hook-form";
 import { useTranslation } from "../services/useTranslation";
 
-const Contactform = () => {
+const Contactform = ({ setSlider }) => {
     const { t } = useTranslation('de');
-    const { register, handleSubmit, formState: { errors }, } = useForm();
+    const { register, handleSubmit, reset, formState: { errors }, } = useForm();
     const [privacy, setprivacy] = useState(false);
     const [isSubmit, setisSubmit] = useState(false);
 
@@ -16,10 +16,11 @@ const Contactform = () => {
         setprivacy(newValue)
     }
     const onSubmit = async (data) => {
+        setSlider();
         setisSubmit(true)
         if (!privacy) { return }
 
-        const response = await fetch('https://www.johannes-roth.de/sendMail.php', {
+        const response = await fetch('https://www.johannes-roth.de/send.php', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -27,14 +28,16 @@ const Contactform = () => {
             body: JSON.stringify({
                 name: data.name,
                 email: data.email,
+                phone: data.phone,
                 message: data.message
+
             }),
         });
 
         const result = await response.text();
         console.log(result);
 
-
+        reset();
     }
 
     return (
@@ -42,7 +45,7 @@ const Contactform = () => {
 
             <div className={styles.inputContainer}>
                 {/* <label>Name:</label> */}
-                <input type="text" placeholder={t('contactform.name')} {...register("name", { required:t('contactform.emptyfields.name') })} />
+                <input type="text" placeholder={t('contactform.name')} {...register("name", { required: t('contactform.emptyfields.name') })} />
                 {errors.name && (
                     <p>{errors.name.message}</p>
                 )}

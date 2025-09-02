@@ -16,11 +16,16 @@ switch ($_SERVER['REQUEST_METHOD']) {
     
             $email = $params->email;
             $name = $params->name;
+            $phone = $params->phone;
             $message = $params->message;
     
             $recipient = 'kontakt@johannes-roth.de';  
             $subject = "neue Nachricht von deinem Kontaktformular";
-            $message = "<br><strong>Von: </strong>" . $name . "<br><strong>Email: </strong> " . $email . "<br><br><br><strong>Nachricht:</strong><br><br>" . $message;
+            $message = 
+                    "<br><strong>Von: </strong>" . $name .
+                    "<br><strong>Email: </strong> " . $email .
+                    "<br><strong>Telefon: </strong> " . $phone . 
+                    "<br><br><br><strong>Nachricht:</strong><br><br>" . $message;
     
             $headers   = array();
             $headers[] = 'MIME-Version: 1.0';

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from './contact.module.scss';
 import Headline from "../shared/headline";
 import { useTranslation } from "../services/useTranslation";
@@ -6,7 +6,13 @@ import Contactform from "./contactform";
 import Linkbox from "../shared/linkbox";
 const Contact = () => {
     const { t } = useTranslation('de');
+    const [isSubmit, setisSubmit] = useState(false);
 
+    const submit = () => {
+        setisSubmit(true);
+        console.log(isSubmit);
+        
+    }
     return (
         <section className={styles.contactSection} id="contact">
             <div className={`${styles.content} screenMargin`}>
@@ -38,12 +44,15 @@ const Contact = () => {
 
                     </div>
                     <div className={styles.formContainer}>
-                        <Contactform />
+                        <Contactform setSlider={submit} />
                     </div>
 
                 </div>
 
 
+            </div>
+            <div className={`${styles.response} ${isSubmit ? styles.slidin : ''}`}>
+                <h2>{t('contact.response')}</h2>
             </div>
         </section>
     );
