@@ -16,7 +16,7 @@ const Contactform = ({ setSlider }) => {
         setprivacy(newValue)
     }
     const onSubmit = async (data) => {
-        setSlider();
+
         setisSubmit(true)
         if (!privacy) { return }
 
@@ -36,7 +36,9 @@ const Contactform = ({ setSlider }) => {
 
         const result = await response.text();
         console.log(result);
-
+        setisSubmit(false);
+        setprivacy(false);
+        setSlider();
         reset();
     }
 

@@ -69,8 +69,8 @@
 }
 
 .portrait {
-    width: clamp(300px, 35vw, 690px);
-
+    width: 690px;
+    object-fit: cover;
     border-radius: 70% 50% 70% 50%;
     transition: border-radius 1s ease-in-out;
     background-color: var(--back);
@@ -115,7 +115,7 @@
     }
 
     .portrait {
-        width: 50%;
+
         margin-top: 0;
         border-radius: 20px;
     }
@@ -183,4 +183,43 @@
         width: 100%;
     }
 
+   
+
+}
+
+
+@media(max-width: 1820px) {
+    .portrait {
+        width: 600px;
+    }
+}
+
+@media(max-width: 1620px) {
+    .portrait {
+        width: 560px;
+    }
+}
+
+@media(max-width: 1420px) {
+    .portrait {
+        width: 420px;
+    }
+}
+
+@media(max-width: 720px) {
+    .portrait {
+        width: 360px;
+    }
+}
+
+@media(max-width: 500px) {
+    .portrait {
+        width: 360px;
+    }
+}
+
+@media(max-width: 400px) {
+    .portrait {
+        width: 200px;
+    }
 }
