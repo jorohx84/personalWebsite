@@ -53,7 +53,7 @@ const Testimonials = () => {
             name: 'Volker',
             memoji: './memojis/volker.svg',
             memojiTwink: './memojis/volker_twink.svg',
-            job: 'IT Director',
+            job: 'Director',
             comment: t('testimonials.commentVolker')
         },
 

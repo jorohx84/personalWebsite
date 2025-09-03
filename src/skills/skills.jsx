@@ -75,9 +75,9 @@ const Skills = () => {
     ];
 
     const methodicons = [
-        './icons/git.svg',
-        './icons/kanban.svg',
-        './icons/scrum.svg',
+        './icons/git_blue.svg',
+        './icons/kanban_blue.svg',
+        './icons/scrum_blue.svg',
     ]
 
 
@@ -110,8 +110,6 @@ const Skills = () => {
                 <Headline label={t('skills.headline')} />
                 <div className={styles.skillContainer}>
 
-
-
                     <div className={styles.skillIconsContainer}>
                         <div className={styles.textContainer}>
                             <h2>{t('skills.textHeadline')}</h2>
@@ -143,87 +141,95 @@ const Skills = () => {
 
 
 
-
-
-
-                    <div className={`${styles.skillIconsContainer} ${styles.reverse}`}>
+                    <div className={styles.backendSkillsContainer}>
+                        <div className={styles.textContainer}>
+                            <h2>{t('skills.subHeadline')}</h2>
+                            <p>{t('skills.backendText')}</p>
+                        </div>
                         <div className={styles.learningProgress}>
                             <div className={styles.learningProgressContainer}>
 
                                 <div className={styles.learningProgressInner}>
 
                                     <div className={styles.progressContainer}>
-                                          <img src="./icons/python.svg" alt="" />
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 50} transform="rotate(-90 60 60)" />
                                             <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">50%</text>
                                         </svg>
-                                        <span>Python</span>
+
+                                        <div className={styles.skillName}>
+                                            <img src="./icons/python.svg" alt="" />
+                                            <span>Python</span>
+                                        </div>
                                     </div>
 
                                     <div className={styles.progressContainer}>
-                                           <img src="./icons/django.svg" alt="" />
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 30} transform="rotate(-90 60 60)" />
                                             <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">30%</text>
                                         </svg>
 
-                                        <span>Django</span>
+                                      
+                                        <div className={styles.skillName}>
+                                            <img src="./icons/django.svg" alt="" />
+                                            <span>Django</span>
+                                        </div>
                                     </div>
                                     <div className={styles.progressContainer}>
-                                        <img src="./icons/database.svg" alt="" />
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 15} transform="rotate(-90 60 60)" />
                                             <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">15%</text>
                                         </svg>
 
-                                        <span>SQLite</span>
+                                        <div className={styles.skillName}>
+                                            <img src="./icons/database.svg" alt="" />
+                                            <span>SQLite</span>
+                                        </div>
                                     </div>
                                     <div className={styles.progressContainer}>
-                                         <img src="./icons/docker.svg" alt="" />
+
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="200" height="200">
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="#e5e7eb" strokeWidth="12" />
                                             <circle cx="60" cy="60" r="54" fill="none" stroke="var(--main)" strokeWidth="12" strokeLinecap="round" pathLength="100" strokeDasharray="100" strokeDashoffset={100 - 5} transform="rotate(-90 60 60)" />
                                             <text x="60" y="60" textAnchor="middle" dominantBaseline="middle" fontSize="22" fontWeight="700" fill="#111827">5%</text>
                                         </svg>
+                                        <div className={styles.skillName}>
+                                            <img src="./icons/docker.svg" alt="" />
+                                            <span>Docker</span>
+                                        </div>
 
-                                        <span>Docker</span>
                                     </div>
 
                                 </div>
                             </div>
                         </div>
-
-                        <div className={styles.textContainer}>
-                            <h2>{t('skills.subHeadline')}</h2>
-                            <p>{t('skills.backendText')}</p>
-
-
-                        </div>
-
                     </div>
-                    <div className={styles.skillIconsContainer}>
 
-                        <div className={styles.methodsContainer}>
-                            <h1>{t('skills.methodsHeadline')}</h1>
-                            <div className={styles.methodsContent}>
-                                {methods.map((method, index) => (
-                                    <div key={index}>
-                                        <div className={styles.methodCard}>
-                                            <img src={methodicons[index]} alt="" />
-                                            <h3>{method.name}</h3>
-                                            <p>{method.text}</p>
-                                        </div>
+
+
+                    <div className={styles.methodsContainer}>
+                        <h1>{t('skills.methodsHeadline')}</h1>
+                        <div className={styles.methodsContent}>
+                            {methods.map((method, index) => (
+                                <div key={index}>
+                                    <div className={styles.methodCard}>
+                                        <img src={methodicons[index]} alt="" />
+                                        <h2>{method.name}</h2>
+                                        <p>{method.text}</p>
                                     </div>
+                                </div>
 
-                                ))}
-                            </div>
+                            ))}
                         </div>
-
                     </div>
+
+
 
                 </div>
 
