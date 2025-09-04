@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from './contactform.module.scss';
 import { useForm } from "react-hook-form";
 import { useTranslation } from "../services/useTranslation";
+import { HashLink } from "react-router-hash-link";
 
 const Contactform = ({ setSlider }) => {
     const { t } = useTranslation('de');
@@ -93,7 +94,7 @@ const Contactform = ({ setSlider }) => {
                             <img src="./icons/check.svg" alt="" />
                         )}
                     </div>
-                    <p>{t('contactform.privacy1')} <a href="'">{t('contactform.link')}</a>{t('contactform.privacy2')}</p>
+                    <p>{t('contactform.privacy1')} <HashLink smooth to="/privacy">{t('contactform.link')}</HashLink>{t('contactform.privacy2')}</p>
                 </div>
                 {(!privacy && isSubmit) && <span>{t('contactform.emptyfields.privacy')}</span>}
             </div>

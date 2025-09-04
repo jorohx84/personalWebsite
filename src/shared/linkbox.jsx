@@ -13,7 +13,7 @@ const Linkbox = () => {
             <a href="mailto:kontakt@johannes-roth.de"><img src="./icons/mail_dark.svg" alt="mail" /></a>
             {/* <div className={styles.dot}></div> */}
 
-            <a href="tel:015141202010"><img src="./icons/call.svg" alt="" /></a>
+            <a href="tel:015141292919"><img src="./icons/call.svg" alt="" /></a>
 
 
         </div>
