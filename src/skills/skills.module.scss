@@ -52,7 +52,7 @@
     min-height: 80vh;
     display: flex;
     flex-direction: column;
-     border-bottom: solid var(--back);
+    border-bottom: solid var(--back);
 
     align-items: flex-start;
 
@@ -230,7 +230,8 @@
 
         >span {
             text-align: start;
-            font-size: clamp(0.6rem, 1vw, 1.2rem);
+
+            font-size: 6px;
             font-weight: 600;
         }
 
@@ -323,6 +324,12 @@
 
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move2 {
@@ -330,6 +337,12 @@
     top: 0 !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move3 {
@@ -337,6 +350,12 @@
     top: 0 !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move4 {
@@ -344,6 +363,12 @@
     top: 0 !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move5 {
@@ -351,6 +376,12 @@
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move6 {
@@ -358,6 +389,12 @@
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move7 {
@@ -365,6 +402,12 @@
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 .move8 {
@@ -372,6 +415,12 @@
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
+
+    .flipCardBack {
+        >span {
+            font-size: clamp(0.6rem, 1vw, 1.2rem);
+        }
+    }
 }
 
 
@@ -528,7 +577,7 @@ svg {
         }
     }
 
-    .learningProgressInner{
+    .learningProgressInner {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -552,9 +601,11 @@ svg {
             text-align: center;
         }
     }
-   .learningProgressInner{
+
+    .learningProgressInner {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .skillIconsContainer {
         border-bottom: unset;
     }
