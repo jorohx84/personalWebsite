@@ -18,7 +18,9 @@ const Header = () => {
                     <a href="/"><img src="./logo/logo.svg" alt="" /></a>
                 </div>
                 <nav>
+
                     <HashLink smooth to="/#aboutme">{t('header.aboutme')}</HashLink>
+                    <HashLink smooth to="/#stack">{t('header.stack')}</HashLink>
                     <HashLink smooth to="/#skills">{t('header.skills')}</HashLink>
                     <HashLink smooth to="/#projects">{t('header.projects')}</HashLink>
                     <HashLink smooth to="/#contact">{t('header.contact')}</HashLink>
@@ -48,7 +50,9 @@ const Header = () => {
 
             <div className={`${styles.respMenu} ${burgerOpen ? styles.slide : ''} `} onClick={() => setburgerOpen(false)}>
                 <div>
+                 
                     <HashLink smooth to="/#aboutme">{t('header.aboutme')}</HashLink>
+                    <HashLink smooth to="/#stack">{t('header.stack')}</HashLink>
                     <HashLink smooth to="/#skills">{t('header.skills')}</HashLink>
                     <HashLink smooth to="/#projects">{t('header.projects')}</HashLink>
                     <HashLink smooth to="/#contact">{t('header.contact')}</HashLink>

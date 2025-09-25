@@ -5,6 +5,7 @@ export const translations = {
     de: {
         header: {
             aboutme: 'Über mich',
+            stack: 'Stack',
             skills: 'Fähigkeiten',
             projects: 'Projekte',
             contact: 'Kontakt',
@@ -37,8 +38,8 @@ export const translations = {
             text: 'Software entwickeln ist meine Leidenschaft – als Frontend-Entwickler lebe ich es, Ideen in Code zu verwandeln und kreative, durchdachte Lösungen zu entwickeln. Ich liebe es, Probleme zu analysieren, elegante Strukturen zu schaffen und funktionierenden Code zu schreiben, der wirklich Sinn ergibt. Besonders begeistert mich die Zusammenarbeit mit anderen Entwicklern in Teams, bei der neue Ansätze entstehen und Projekte gemeinsam wachsen. Es fasziniert mich, komplexe Herausforderungen Schritt für Schritt zu lösen und dabei ständig dazuzulernen. Die Möglichkeit, meine Fähigkeiten kontinuierlich zu erweitern, motiviert mich, neue Technologien auszuprobieren, Prozesse zu optimieren und kreative Lösungen zu entwickeln, die echten Mehrwert schaffen. Programmieren ist für mich nicht nur ein Beruf, sondern eine Leidenschaft, die mich antreibt und jeden Tag inspiriert.',
 
         },
-        skills: {
-            headline: 'FÄHIGKEITEN',
+        stack: {
+            headline: 'TECH-STACK',
             textHeadline: 'Modernes Webdevelopment mit agilem Mindset',
             frontendText: 'Als Frontend-Entwickler mit fundierter Ausbildung in modernen Webtechnologien gestalte ich nutzerzentrierte und performante Anwendungen. Dabei lege ich besonderen Wert auf klare Strukturen, durchdachte User Interfaces und sauberen, wartbaren Code. Meine technische Basis umfasst Frameworks wie React sowie den gezielten Einsatz von SCSS, CSS-Variablen und responsivem Design. In agilen Projekten arbeite ich mit Methoden wie Scrum oder Kanban und setze Tools wie Git und Trello zur transparenten und effizienten Zusammenarbeit ein. Mein Ziel ist es, Erlebnisse zu schaffen, die nicht nur funktional, sondern auch visuell und in der Bedienung überzeugen.',
             backendText: 'Aktuell erweitere ich meine Kenntnisse als Webentwickler durch eine gezielte Weiterbildung zum Fullstack-Entwickler mit Fokus auf Python und Django. Damit baue ich meine Fähigkeit aus, auch serverseitige Logiken, APIs und Datenbankanbindungen eigenständig umzusetzen. Dabei kommen relationale Datenbanken wie SQLite zum Einsatz, ebenso wie Konzepte der REST-Architektur. Mein Verständnis für strukturierte Codearchitektur, saubere Schnittstellen und sicherheitsrelevante Aspekte ermöglicht es mir, Webanwendungen ganzheitlich zu entwickeln. Unterstützt durch moderne Tools wie Git und agile Methoden wie Scrum und Kanban, arbeite ich effizient, strukturiert und immer lösungsorientiert im Team.',
@@ -60,6 +61,37 @@ export const translations = {
             ]
 
         },
+        skills: {
+            headline: 'Fähigkeiten',
+
+            skillcards: [
+                {
+                    skillname: 'Projektmanagement',
+                    description: 'Erfahrung in der Planung und Umsetzung komplexer Projekte – von der Idee bis zum erfolgreichen Abschluss.',
+                },
+                {
+                    skillname: 'Bedarfsanalyse',
+                    description: 'Ich erkenne Bedürfnisse schnell und überführe sie in klare, umsetzbare Anforderungen für digitale Lösungen.'
+                },
+                {
+                    skillname: 'Stakeholder-Management',
+                    description: 'Sichere Kommunikation mit verschiedenen Stakeholdern – für reibungslose Abstimmung im Team und mit Kunden.'
+                },
+                {
+                    skillname: 'Datenanalyse & Reporting',
+                    description: 'Fundierte Erfahrung im Umgang mit Daten, Reports und KPIs – wichtig für fundierte Entscheidungen im Entwicklungsprozess.'
+                },
+                {
+                    skillname: 'Prozessoptimierung',
+                    description: 'Ich erkenne Verbesserungspotenzial schnell und sorge für effizientere Abläufe – im Code wie auch im Workflow.'
+                },
+                {
+                    skillname: 'Teamübergreifende Zusammenarbeit',
+                    description: 'Erfolgreiche Zusammenarbeit mit interdisziplinären Teams ist für mich selbstverständlich – ob mit Design, Backend oder Projektleitung.'
+                }
+            ],
+        },
+
         projects: {
             headline: 'PROJEKTE',
             joinText: 'Join ist eine intuitive Multi-Device-Anwendung zur Aufgabenverwaltung im Stil eines Kanban-Boards. Aufgaben lassen sich per Drag & Drop zwischen den Bearbeitungsphasen verschieben. Jeder Task kann gezielt einzelnen Nutzern zugewiesen werden – ideal für Teamarbeit und strukturierte Workflows.',
@@ -176,6 +208,7 @@ export const translations = {
     en: {
         header: {
             aboutme: 'About',
+            stack: 'Stack',
             skills: 'Skills',
             projects: 'Projects',
             contact: 'Contact',
@@ -184,7 +217,7 @@ export const translations = {
             button: 'About'
         },
         about: {
-            headline: 'ABOUT',
+            headline: 'ABOUT ME',
             button: 'Let`s talk',
             softskills: [
                 {
@@ -207,8 +240,8 @@ export const translations = {
             textHeadline: 'My Passion for Software Development',
             text: 'Software development is my passion – as a frontend developer, I thrive on turning ideas into code and creating thoughtful, innovative solutions. I enjoy analyzing problems, building elegant structures, and writing functional code that truly makes sense. What excites me most is collaborating with other developers in teams, where new approaches emerge and projects grow together. I’m fascinated by tackling complex challenges step by step while continuously learning along the way. The opportunity to expand my skills, experiment with new technologies, optimize processes, and develop creative solutions that deliver real value keeps me motivated. For me, coding is not just a job – it’s a passion that drives and inspires me every day.',
         },
-        skills: {
-            headline: 'SKILLS',
+        stack: {
+            headline: 'TECH-STACK',
             textHeadline: 'Modern Web Development with an Agile Mindset',
             frontendText: 'As a frontend developer with a strong foundation in modern web technologies, I create user-centered and high-performance applications. I place particular emphasis on clear structures, thoughtful user interfaces, and clean, maintainable code. My technical skillset includes frameworks like React as well as the use of SCSS, CSS variables, and responsive design principles. In agile projects, I work with methods such as Scrum and Kanban and rely on tools like Git and Trello for transparent and efficient collaboration. My goal is to craft digital experiences that are not only functional, but also visually appealing and intuitive to use.',
             backendText: 'I am currently expanding my skills as a web developer through targeted training to become a full-stack developer with a focus on Python and Django. This enables me to independently implement backend logic, APIs, and database integration. I work with relational databases such as SQLite and apply concepts of REST architecture to build robust server-side applications. My understanding of structured code architecture, clean interfaces, and security best practices allows me to develop web solutions end-to-end. Supported by modern tools like Git and agile methodologies such as Scrum and Kanban, I contribute to efficient, structured, and solution-oriented teamwork.',
@@ -230,6 +263,35 @@ export const translations = {
                 }
             ]
 
+        },
+        skills: {
+            headline: 'Skills',
+            skillcards: [
+                {
+                    skillname: 'Project Management',
+                    description: 'Experience in planning and executing complex projects – from the initial idea to successful completion.'
+                },
+                {
+                    skillname: 'Requirements Analysis',
+                    description: 'I quickly identify needs and translate them into clear, actionable requirements for digital solutions.'
+                },
+                {
+                    skillname: 'Stakeholder Management',
+                    description: 'Confident communication with various stakeholders – ensuring smooth coordination within the team and with clients.'
+                },
+                {
+                    skillname: 'Data Analysis & Reporting',
+                    description: 'Solid experience working with data, reports, and KPIs – essential for well-informed decisions during the development process.'
+                },
+                {
+                    skillname: 'Process Optimization',
+                    description: 'I quickly identify areas for improvement and ensure more efficient workflows – both in code and in organizational processes.'
+                },
+                {
+                    skillname: 'Cross-Functional Collaboration',
+                    description: 'Working successfully with interdisciplinary teams is second nature to me – whether with design, backend, or project management.'
+                }
+            ],
         },
         projects: {
             headline: 'PROJECTS',

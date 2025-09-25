@@ -71,9 +71,9 @@
 .portrait {
     width: 690px;
     object-fit: cover;
-    border-radius: 70% 50% 70% 50%;
+    // border-radius: 70% 50% 70% 50%;
     transition: border-radius 1s ease-in-out;
-    background-color: var(--back);
+    // background-color: var(--back);
     margin-top: clamp(0px, calc(400px - 20vw), 80px);
 
     &:hover {

@@ -88,7 +88,7 @@ const Testimonials = () => {
                 </div>
 
             </div>
-            <Divider />
+            <Divider section="testimonials" />
         </section>
     );
 }

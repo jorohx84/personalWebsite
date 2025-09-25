@@ -35,7 +35,7 @@ const Hero = () => {
     };
 
     return (
-        <section className={styles.heroSection}>
+        <section className={styles.heroSection} id="hero">
             <div className={styles.heroContainer}>
                 <div className={styles.heroContainerInner}>
 

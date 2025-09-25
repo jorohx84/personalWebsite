@@ -6,17 +6,17 @@ const Divider = ({ section, left, right }) => {
     return (
         <div className={styles.divider}>
             <div className={styles.leftLine} style={{ width: left }}></div>
-            {(section === 'aboutme' || section === 'skills') && (
+            {(section !== 'hero' ) && (
 
-                <div className={styles.dot}></div>
+                // <div className={styles.dot}></div>
 
-
+                <img className={styles.dividerImage} src="./logo/favicon.svg" alt="" />
             )}
 
             {section === 'hero' && (
                 <Linkbox />
             )}
-        
+
 
 
             {section === 'projects' && (

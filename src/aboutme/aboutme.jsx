@@ -58,15 +58,43 @@ const Aboutme = () => {
 
     return (
         <section className={styles.aboutmeSection} id="aboutme">
-
+            {/* 
+                    <img src="./img/0A30DE46-5422-4547-B70A-F5ACBE16F88B.png" alt="" /> */}
             <div className={`${styles.content} screenMargin`}>
-                <Headline label={t('about.headline')} />
+                {/* <Headline label={t('about.headline')} /> */}
                 <div className={styles.subContent}>
+
+                    <div className={styles.photo}>
+                        {/* <img src="./img/portrait1.webp" alt="" /> */}
+                    </div>
                     <div className={styles.textContainer}>
                         <div className={styles.aboutText}>
-                            <h2>{t('about.textHeadline')}</h2>
+                            {/* <h2>{t('about.textHeadline')}</h2> */}
+                            <h1>{t('about.headline')}</h1>
                             <p>{t('about.text')}</p>
                         </div>
+
+                        <div className={styles.factsheet}>
+                            <div className={styles.fact}>
+                                <p>Alter</p>
+                                <p>40 Jahre</p>
+                            </div>
+                                 <div className={styles.fact}>
+                                <p>Wohnhaft</p>
+                                <p>76863 Herxheim/Rheinland-Pfalz</p>
+                            </div>
+                                 <div className={styles.fact}>
+                                <p>Beruf</p>
+                                <p>Frontend Entwickler</p>
+                            </div>
+                                 <div className={styles.fact}>
+                                <p>Familienstand</p>
+                                <p>verheiratet, 2 Kinder</p>
+                            </div>
+
+                        </div>
+
+
 
                         {window.innerWidth >= 1360 && (
                             <div className={styles.btnContainer}>
@@ -77,8 +105,9 @@ const Aboutme = () => {
                             </div>
                         )}
                     </div>
-                    {/* {window.innerWidth < 700 && ( */}
-                        <div className={styles.softskills} >
+
+
+                    {/* <div className={styles.softskills} >
                             {softskills.map((skill, index) => (
                                 <div key={index}>
                                     <div className={`${styles.softskillsCard} ${inView ? styles.scaleCard : ''}`}>
@@ -92,8 +121,11 @@ const Aboutme = () => {
                             ))}
 
 
-                        </div>
-                    {/* )} */}
+                        </div> */}
+
+
+
+
                     {/* {window.innerWidth >= 700 && (
                         <div className={styles.softskills}>
                             {softskills.map((skill, index) => (
@@ -130,7 +162,7 @@ const Aboutme = () => {
                 )}
 
             </div>
-            <Divider />
+            <Divider section="aboutme" />
         </section>
     );
 }
