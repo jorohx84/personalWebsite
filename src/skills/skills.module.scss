@@ -13,7 +13,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-gap: 56px;
+    gap: 56px;
 }
 
 .skillContainer {
@@ -30,24 +30,39 @@ gap: 56px;
     height: 300px;
     display: flex;
     flex-direction: column;
-   transform: scale(0.9);
-   transition: transform 1s ease-in-out;
+    transform: scale(0.9);
+    transition: transform 1s ease-in-out;
     align-items: center;
     text-align: center;
     gap: 16px;
     padding: 32px;
-    background-color: var(--back);
-   box-shadow: var(--shadow);
- color: rgb(242, 239, 239);
+    // background-color: var(--back);
+    // box-shadow: var(--shadow);
+    border: solid 1px var(--main);
     border-radius: 10px;
 
-    >img {
+    .cardImage {
         width: 56px;
-     
+        height: 56px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--main);
+        border-radius: 100px;
+
+        >img {
+
+            width: 32px;
+
+
+        }
     }
+
 
 }
 
-.scaleCard{
+
+
+.scaleCard {
     transform: scale(1);
 }

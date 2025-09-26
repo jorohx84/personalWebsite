@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     gap: 112px;
 
 
@@ -14,7 +15,8 @@
 
     min-height: 100%;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    justify-content: center;
     gap: 32px;
 
     >p {
@@ -28,63 +30,66 @@
 
     height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
     gap: clamp(96px, 10vw, 112px);
-   
+    margin-top: clamp(0px, 1vw, 100px);
 }
 
-.skillIconsContainer {
-    width: 100%;
+// .skillIconsContainer {
+//     width: 100%;
 
-    display: flex;
-
-    // border-bottom: solid var(--back);
-
-
-
-    gap: clamp(56px, 8vw, 224px);
-
-
-}
-
-.backendSkillsContainer {
-    width: 100%;
-    // min-height: 80vh;
-    display: flex;
-    // flex-direction: column;
-    justify-content: flex-start;
-    // border-bottom: solid var(--back);
-
-    align-items: flex-start;
-
-    gap: clamp(56px, 8vw, 224px);
-}
+//     display: flex;
+// justify-content: center;
+//     // border-bottom: solid var(--back);
 
 
 
-.textContainer {
-    width: 100%;
-    max-width: clamp(500px, 30vw, 700px);
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-}
+//     gap: clamp(56px, 8vw, 224px);
 
 
-.skillsContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
+// }
+
+// .backendSkillsContainer {
+//     width: 100%;
+//     // min-height: 80vh;
+//     display: flex;
+//     // flex-direction: column;
+//     justify-content: flex-start;
+//     // border-bottom: solid var(--back);
+
+//     align-items: flex-start;
+
+//     gap: clamp(56px, 8vw, 224px);
+// }
 
 
-}
 
-.skillflowContainer {
-    width: 100%;
-    max-width: 700px;
+// .textContainer {
+//     width: 100%;
+//     max-width: clamp(500px, 30vw, 700px);
+//     display: flex;
+//     flex-direction: column;
+//     gap: 32px;
+// }
+
+
+// .skillsContainer {
+//     width: 100%;
+//     height: 100%;
+//     display: flex;
+
+
+// }
+
+.skillCards {
+    width: clamp(300px, 60vw, 1120px);
+    max-width: 1120px;
+
     // height: clamp(50px, 30vw, 620px);
     aspect-ratio: 2/1;
     position: relative;
- 
+
 
     >span {
         font-size: clamp(32px, 2vw, 56px);
@@ -96,55 +101,55 @@
 
 
 
-.methodsContainer {
-    width: 100%;
-    min-height: 80vh;
+// .methodsContainer {
+//     width: 100%;
+//     min-height: 80vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
 
-    gap: clamp(56px, 8vw, 96px);
+//     gap: clamp(56px, 8vw, 96px);
 
-    >h1 {
-        font-size: clamp(32px, 2vw, 48px);
-        text-align: center;
-        box-sizing: border-box;
-        padding: 16px;
-        border-radius: 8px;
+//     >h1 {
+//         font-size: clamp(32px, 2vw, 48px);
+//         text-align: center;
+//         box-sizing: border-box;
+//         padding: 16px;
+//         border-radius: 8px;
 
-    }
-}
+//     }
+// }
 
-.methodsContent {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    gap: 32px;
-
-
-}
-
-.methodCard {
-
-    width: 100%;
-    max-width: 500px;
-    height: clamp(360px, calc(600px - 8vw), 440px);
-    box-shadow: var(--shadow);
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px;
-    gap: 32px;
-    text-align: center;
-
-    >img {
-        width: 70px
-    }
+// .methodsContent {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 32px;
 
 
-}
+// }
+
+// .methodCard {
+
+//     width: 100%;
+//     max-width: 500px;
+//     height: clamp(360px, calc(600px - 8vw), 440px);
+//     box-shadow: var(--shadow);
+//     border-radius: 8px;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     padding: 32px;
+//     gap: 32px;
+//     text-align: center;
+
+//     >img {
+//         width: 70px
+//     }
+
+
+// }
 
 .flipCard {
     perspective: 1000px;
@@ -249,13 +254,14 @@
 
     .flipCardBack {
         transform: rotateY(180deg);
-
+        gap: 16px;
+        padding: 12px;
 
         >span {
-            text-align: start;
+            text-align: center;
 
-            font-size: 6px;
-            font-weight: 600;
+            font-size: clamp(12px, 0.5vw, 14px) !important;
+            font-weight: 300;
         }
 
         >img {
@@ -329,7 +335,7 @@
 .move1 {
 
     // left: calc(var(--gap)/2) !important;
-    left: 0 !important;
+    left: calc(var(--gap)/2) !important;
     top: 0 !important;
 
     width: calc(100%/4 - var(--gap)) !important;
@@ -343,7 +349,7 @@
 }
 
 .move2 {
-    left: calc(25%) !important;
+    left: calc(25% + calc(var(--gap)/2)) !important;
     top: 0 !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -356,7 +362,7 @@
 }
 
 .move3 {
-    left: calc(50%) !important;
+    left: calc(50% + calc(var(--gap)/2)) !important;
     top: 0 !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -369,7 +375,7 @@
 }
 
 .move4 {
-    left: calc(75%) !important;
+    left: calc(75% + calc(var(--gap)/2)) !important;
     top: 0 !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -382,7 +388,7 @@
 }
 
 .move5 {
-    left: 0 !important; // zentriert -> calc(var(--gap)/2))
+    left: calc(var(--gap)/2) !important; // zentriert -> calc(var(--gap)/2))
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -395,7 +401,7 @@
 }
 
 .move6 {
-    left: calc(25%) !important; // zentriert -> calc(25% + calc(var(--gap)/2))
+    left: calc(25% + calc(var(--gap)/2)) !important; // zentriert -> calc(25% + calc(var(--gap)/2))
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -408,7 +414,7 @@
 }
 
 .move7 {
-    left: calc(50%) !important; // zentriert -> calc(50% + calc(var(--gap)/2))
+    left: calc(50% + calc(var(--gap)/2)) !important; // zentriert -> calc(50% + calc(var(--gap)/2))
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -421,7 +427,7 @@
 }
 
 .move8 {
-    left: calc(75%) !important; // zentriert -> calc(75% + calc(var(--gap)/2))
+    left: calc(75% + calc(var(--gap)/2)) !important; // zentriert -> calc(75% + calc(var(--gap)/2))
     top: 50% !important;
     width: calc(100%/4 - var(--gap)) !important;
     height: calc(100%/2 - var(--gap)) !important;
@@ -439,192 +445,192 @@
 
 
 
-.learningProgress {
-    width: 100%;
-    max-width: 700px;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding: 8px;
+// .learningProgress {
+//     width: 100%;
+//     max-width: 700px;
+//     height: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: flex-end;
+//     padding: 8px;
 
-    border-radius: 10px;
-
-
-}
-
-.learningProgressContainer {
-    width: 100%;
-
-    height: 100%;
-    display: flex;
-
-    gap: clamp(18px, 2vw, 48px);
-
-    >h2 {
-        width: 100%;
-        text-align: center;
-        background-color: var(--back);
-        box-sizing: border-box;
-        padding: 16px;
-
-    }
-}
-
-.learningProgressInner {
-    width: 100%;
-
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: clamp(32px, 7vw, 56px)
-}
-
-.progressContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: clamp(0px, 1vw, 28px);
-    padding: 32px;
-    box-shadow: var(--shadow);
-
-    border-radius: 8px;
-}
-
-svg {
-    width: clamp(80px, 8vw, 100px);
-    height: clamp(80px, 8vw, 100px);
-    transition: transform 0.3s ease-in-out;
-
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-
-.skillName {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-
-    >span {
-        font-size: clamp(16px, 5vw, 18px);
-        color: var(--dark);
-        font-weight: 400;
-    }
-
-    >img {
-        width: clamp(30px, 2vw, 40px);
-    }
-}
-
-@media(max-width: 1150px) {
-
-    .skillContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .skillIconsContainer {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .backendSkillsContainer {
-        align-items: center;
-    }
-
-    .skillIconsContainer.reverse> :nth-child(1) {
-        order: 2;
-    }
-
-    .skillIconsContainer.reverse> :nth-child(2) {
-        order: 1;
-    }
-
-    .skillIcons {
-        gap: 16px;
-    }
-
-    .content {
-        align-items: center;
-    }
+//     border-radius: 10px;
 
 
+// }
 
-    .learningProgressContainer {
-        align-items: center;
+// .learningProgressContainer {
+//     width: 100%;
 
-        >h2 {
-            text-align: center;
-        }
+//     height: 100%;
+//     display: flex;
 
-    }
+//     gap: clamp(18px, 2vw, 48px);
 
-    .progressContainer {
-        justify-content: center;
-    }
+//     >h2 {
+//         width: 100%;
+//         text-align: center;
+//         background-color: var(--back);
+//         box-sizing: border-box;
+//         padding: 16px;
 
-    .methodsContent {
-        flex-direction: column;
-        align-items: center;
-    }
+//     }
+// }
 
-    .methodCard {
-        height: clamp(360px, calc(600px - 40vw), 420px);
-    }
-}
+// .learningProgressInner {
+//     width: 100%;
 
-@media(max-width: 1000px) {
+//     // display: grid;
+//     // grid-template-columns: repeat(4, 1fr);
+//     display: flex;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: clamp(32px, 7vw, 56px)
+// }
 
-    .progressContainer {
+// .progressContainer {
+//     width: 100%;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;
+//     gap: clamp(0px, 1vw, 28px);
+//     padding: 32px;
+//     box-shadow: var(--shadow);
 
-        gap: 16px;
-    }
+//     border-radius: 8px;
+// }
 
-    .textContainer {
-        >h2 {
-            text-align: center;
-        }
-    }
+// svg {
+//     width: clamp(80px, 8vw, 100px);
+//     height: clamp(80px, 8vw, 100px);
+//     transition: transform 0.3s ease-in-out;
 
-    .learningProgressInner {
-        grid-template-columns: repeat(2, 1fr);
-    }
+//     &:hover {
+//         transform: scale(1.1);
+//     }
+// }
 
-}
+// .skillName {
+//     display: flex;
+//     align-items: center;
+//     gap: 8px;
 
-@media(max-width: 850px) {
-    .methodsContent {
-        flex-direction: column;
-    }
-}
+//     >span {
+//         font-size: clamp(16px, 5vw, 18px);
+//         color: var(--dark);
+//         font-weight: 400;
+//     }
+
+//     >img {
+//         width: clamp(30px, 2vw, 40px);
+//     }
+// }
+
+// @media(max-width: 1150px) {
+
+//     .skillContainer {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .skillIconsContainer {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .backendSkillsContainer {
+//         align-items: center;
+//     }
+
+//     .skillIconsContainer.reverse> :nth-child(1) {
+//         order: 2;
+//     }
+
+//     .skillIconsContainer.reverse> :nth-child(2) {
+//         order: 1;
+//     }
+
+//     .skillIcons {
+//         gap: 16px;
+//     }
+
+//     .content {
+//         align-items: center;
+//     }
 
 
 
-@media(max-width: 600px) {
-    .learningProgress {
-        padding: 16px;
-    }
+//     .learningProgressContainer {
+//         align-items: center;
 
-    .learningProgressContainer {
-        >h2 {
-            text-align: center;
-        }
-    }
+//         >h2 {
+//             text-align: center;
+//         }
 
-    .learningProgressInner {
-        grid-template-columns: repeat(1, 1fr);
-    }
+//     }
 
-    .skillIconsContainer {
-        border-bottom: unset;
-    }
+//     .progressContainer {
+//         justify-content: center;
+//     }
 
-    .backendSkillsContainer {
-        border-bottom: unset;
-    }
-}
+//     .methodsContent {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+
+//     .methodCard {
+//         height: clamp(360px, calc(600px - 40vw), 420px);
+//     }
+// }
+
+// @media(max-width: 1000px) {
+
+//     .progressContainer {
+
+//         gap: 16px;
+//     }
+
+//     .textContainer {
+//         >h2 {
+//             text-align: center;
+//         }
+//     }
+
+//     .learningProgressInner {
+//         grid-template-columns: repeat(2, 1fr);
+//     }
+
+// }
+
+// @media(max-width: 850px) {
+//     .methodsContent {
+//         flex-direction: column;
+//     }
+// }
+
+
+
+// @media(max-width: 600px) {
+//     .learningProgress {
+//         padding: 16px;
+//     }
+
+//     .learningProgressContainer {
+//         >h2 {
+//             text-align: center;
+//         }
+//     }
+
+//     .learningProgressInner {
+//         grid-template-columns: repeat(1, 1fr);
+//     }
+
+//     .skillIconsContainer {
+//         border-bottom: unset;
+//     }
+
+//     .backendSkillsContainer {
+//         border-bottom: unset;
+//     }
+// }

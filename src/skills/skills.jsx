@@ -45,7 +45,10 @@ const Skills = () => {
                     {skills.map((skill, index) => (
                         <div key={index}>
                             <div className={`${styles.skillCard} ${inView ? styles.scaleCard : ''}`}>
-                                <img src={skillImages[index]} alt="" />
+                                <div className={styles.cardImage}>
+                                    <img src={skillImages[index]} alt="" />
+                                </div>
+
                                 <h3>{skill.skillname}</h3>
                                 <p>{skill.description}</p>
                             </div>

@@ -61,53 +61,55 @@ const Aboutme = () => {
             {/* 
                     <img src="./img/0A30DE46-5422-4547-B70A-F5ACBE16F88B.png" alt="" /> */}
             <div className={`${styles.content} screenMargin`}>
-                {/* <Headline label={t('about.headline')} /> */}
+                <Headline label={t('about.headline')} />
                 <div className={styles.subContent}>
 
                     <div className={styles.photo}>
-                        {/* <img src="./img/portrait1.webp" alt="" /> */}
+                        <img src="./img/portrait1_background.webp" alt="" />
                     </div>
                     <div className={styles.textContainer}>
                         <div className={styles.aboutText}>
                             {/* <h2>{t('about.textHeadline')}</h2> */}
-                            <h1>{t('about.headline')}</h1>
+                            <div className={styles.textHeadline}>
+                                <h1>{t('about.subline')}</h1>
+                                <h2>Frontend Developer</h2>
+                            </div>
+
                             <p>{t('about.text')}</p>
                         </div>
 
                         <div className={styles.factsheet}>
                             <div className={styles.fact}>
-                                <p>Alter</p>
-                                <p>40 Jahre</p>
+                                <p>{t('about.fact1.fieldname')}</p>
+                                <span>:</span>
+                                <span>{t('about.fact1.fieldvalue')}</span>
                             </div>
-                                 <div className={styles.fact}>
-                                <p>Wohnhaft</p>
-                                <p>76863 Herxheim/Rheinland-Pfalz</p>
+                            {/* <div className={styles.fact}>
+                                <p>Telefon</p>
+                                <span>+49 151 41292919</span>
                             </div>
-                                 <div className={styles.fact}>
-                                <p>Beruf</p>
-                                <p>Frontend Entwickler</p>
+                            <div className={styles.fact}>
+                                <p>E-Mail</p>
+                                <span>kontakt@johannes-roth.de</span>
+                            </div> */}
+                            <div className={styles.fact}>
+                                <p>{t('about.fact2.fieldname')}</p>
+                                <span>:</span>
+                                <span>{t('about.fact2.fieldvalue')}</span>
                             </div>
-                                 <div className={styles.fact}>
-                                <p>Familienstand</p>
-                                <p>verheiratet, 2 Kinder</p>
+                            <div className={styles.fact}>
+                                <p>{t('about.fact3.fieldname')}</p>
+                                <span>:</span>
+                                <span>{t('about.fact3.fieldvalue')}</span>
+                            </div>
+                            <div className={styles.fact}>
+                                <p>{t('about.fact4.fieldname')}</p>
+                                <span>:</span>
+                                <span>{t('about.fact4.fieldvalue')}</span>
                             </div>
 
                         </div>
-
-
-
-                        {window.innerWidth >= 1360 && (
-                            <div className={styles.btnContainer}>
-                                <div className="btnBack">
-                                    <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
-                                </div>
-
-                            </div>
-                        )}
-                    </div>
-
-
-                    {/* <div className={styles.softskills} >
+                        {/* <div className={styles.softskills} >
                             {softskills.map((skill, index) => (
                                 <div key={index}>
                                     <div className={`${styles.softskillsCard} ${inView ? styles.scaleCard : ''}`}>
@@ -122,6 +124,20 @@ const Aboutme = () => {
 
 
                         </div> */}
+
+
+                        {window.innerWidth >= 1360 && (
+                            <div className={styles.btnContainer}>
+                                <div className="btnBack">
+                                    <button onClick={() => window.location.href = '#contact'}>{t('about.button')}</button>
+                                </div>
+
+                            </div>
+                        )}
+                    </div>
+
+
+
 
 
 

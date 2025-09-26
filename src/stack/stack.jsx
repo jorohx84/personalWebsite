@@ -108,20 +108,19 @@ const Stack = () => {
     return (
         <section className={styles.stackSection} id="stack">
             <div className={`${styles.content} screenMargin`}>
-
+                <Headline label={t('stack.headline')} />
                 <div className={styles.skillContainer}>
+              
+                        {/* <div className={styles.textContainer}>
+                            <h2>{t('stack.textHeadline')}</h2>
 
-                    <div className={styles.skillIconsContainer}>
-                        <div className={styles.textContainer}>
-                            {/* <h2>{t('skills.textHeadline')}</h2> */}
-                            {/* <Headline label={t('skills.headline')} /> */}
                             <h1>{t('stack.headline')}</h1>
                             <p>{t('stack.frontendText')}</p>
 
 
-                        </div>
-                        <div className={styles.skillsContainer}>
-                            <div className={styles.skillflowContainer} id="flow">
+                        </div> */}
+                    
+                            <div className={styles.skillCards} id="flow">
                                 {stack.map((stack, index) => (
                                     <div className={`${styles.flipCard} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
                                         <div className={styles.flipCardInner}>
@@ -129,17 +128,18 @@ const Stack = () => {
                                                 <img src={stack.path} alt="" />
                                             </div>
                                             <div className={styles.flipCardBack}>
-                                                <span>{stack.name}</span>
+                                                <h3>{stack.name}</h3>
+                                                <span>{stack.description}</span>
                                             </div>
                                         </div>
 
                                     </div>
                                 ))}
                             </div>
-                        </div>
+                        
 
 
-                    </div>
+                   
 
 
 
