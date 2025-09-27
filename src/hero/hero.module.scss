@@ -76,11 +76,11 @@
     // background-color: var(--back);
     margin-top: clamp(0px, calc(400px - 20vw), 80px);
 
-    &:hover {
+    // &:hover {
 
-        //   border-radius: 50% 90%  50% 90%;
-        border-radius: 50% 70% 50% 70%;
-    }
+    //     //   border-radius: 50% 90%  50% 90%;
+    //     border-radius: 50% 70% 50% 70%;
+    // }
 }
 
 .margin {
@@ -115,7 +115,8 @@
     }
 
     .portrait {
-
+opacity: 0;
+transform: scale(0.8);
         margin-top: 0;
         border-radius: 20px;
     }

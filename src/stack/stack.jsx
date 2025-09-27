@@ -86,7 +86,11 @@ const Stack = () => {
     const changePosition = () => {
         const ref = document.getElementById('flow');
         const rect = ref.getBoundingClientRect();
-        const trigger = window.innerWidth < 750 ? 0.6 : 0.4;
+        const trigger = window.innerHeight < 750 ? 0.6 : 0.7;
+     
+     
+
+
         const windowHeight = window.innerHeight * trigger;
         const viewState = rect.top < windowHeight ? true : false;
         console.log(windowHeight);
@@ -110,36 +114,36 @@ const Stack = () => {
             <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('stack.headline')} />
                 <div className={styles.skillContainer}>
-              
-                        {/* <div className={styles.textContainer}>
-                            <h2>{t('stack.textHeadline')}</h2>
 
-                            <h1>{t('stack.headline')}</h1>
-                            <p>{t('stack.frontendText')}</p>
+                    <div className={styles.textContainer}>
+                        <h2>{t('stack.textHeadline')}</h2>
 
 
-                        </div> */}
-                    
-                            <div className={styles.skillCards} id="flow">
-                                {stack.map((stack, index) => (
-                                    <div className={`${styles.flipCard} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
-                                        <div className={styles.flipCardInner}>
-                                            <div className={styles.flipCardFront}>
-                                                <img src={stack.path} alt="" />
-                                            </div>
-                                            <div className={styles.flipCardBack}>
-                                                <h3>{stack.name}</h3>
-                                                <span>{stack.description}</span>
-                                            </div>
-                                        </div>
+                        <p>{t('stack.frontendText')}</p>
 
+
+                    </div>
+
+                    <div className={styles.skillCards} id="flow">
+                        {stack.map((stack, index) => (
+                            <div className={`${styles.flipCard} ${inView ? styles[`move${index + 1}`] : ''}`} key={index}>
+                                <div className={styles.flipCardInner}>
+                                    <div className={styles.flipCardFront}>
+                                        <img src={stack.path} alt="" />
                                     </div>
-                                ))}
+                                    <div className={styles.flipCardBack}>
+                                        <h3>{stack.name}</h3>
+                                        {/* <span>{stack.description}</span> */}
+                                    </div>
+                                </div>
+
                             </div>
-                        
+                        ))}
+                    </div>
 
 
-                   
+
+
 
 
 
@@ -212,7 +216,7 @@ const Stack = () => {
                 </div>
 
             </div>
-            <Divider section="stack" />
+            {/* <Divider section="stack" /> */}
         </section>
 
 

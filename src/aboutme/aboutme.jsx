@@ -64,9 +64,10 @@ const Aboutme = () => {
                 <Headline label={t('about.headline')} />
                 <div className={styles.subContent}>
 
-                    <div className={styles.photo}>
+                    {/* <div className={styles.photo}>
                         <img src="./img/portrait1_background.webp" alt="" />
-                    </div>
+                    </div> */}
+               
                     <div className={styles.textContainer}>
                         <div className={styles.aboutText}>
                             {/* <h2>{t('about.textHeadline')}</h2> */}
@@ -84,14 +85,6 @@ const Aboutme = () => {
                                 <span>:</span>
                                 <span>{t('about.fact1.fieldvalue')}</span>
                             </div>
-                            {/* <div className={styles.fact}>
-                                <p>Telefon</p>
-                                <span>+49 151 41292919</span>
-                            </div>
-                            <div className={styles.fact}>
-                                <p>E-Mail</p>
-                                <span>kontakt@johannes-roth.de</span>
-                            </div> */}
                             <div className={styles.fact}>
                                 <p>{t('about.fact2.fieldname')}</p>
                                 <span>:</span>
@@ -109,21 +102,7 @@ const Aboutme = () => {
                             </div>
 
                         </div>
-                        {/* <div className={styles.softskills} >
-                            {softskills.map((skill, index) => (
-                                <div key={index}>
-                                    <div className={`${styles.softskillsCard} ${inView ? styles.scaleCard : ''}`}>
-                                        <div className={styles.softskillsCardTitle}>
-                                            <img src={softskillsImages[index]} alt={skill.title} />
-                                            <h3>{skill.title}</h3>
-                                        </div>
-                                        <span>{skill.description}</span>
-                                    </div>
-                                </div>
-                            ))}
 
-
-                        </div> */}
 
 
                         {window.innerWidth >= 1360 && (
@@ -136,7 +115,21 @@ const Aboutme = () => {
                         )}
                     </div>
 
+     <div className={styles.softskills} >
+                        {softskills.map((skill, index) => (
+                            <div key={index}>
+                                <div className={`${styles.softskillsCard} ${inView ? styles.scaleCard : ''}`}>
+                                    <div className={styles.softskillsCardTitle}>
+                                        <img src={softskillsImages[index]} alt={skill.title} />
+                                        <h3>{skill.title}</h3>
+                                    </div>
+                                    <span>{skill.description}</span>
+                                </div>
+                            </div>
+                        ))}
 
+
+                    </div>
 
 
 

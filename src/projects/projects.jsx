@@ -83,6 +83,7 @@ const Projects = () => {
             duration: '2',
             show: true,
         },
+       
         // {
         //     title: "Personal Website",
         //     imagePath: "img/johannes.webp",
@@ -143,83 +144,72 @@ const Projects = () => {
         <section className={styles.projectsSection} id="projects">
             <div className={`${styles.content} screenMargin`}>
                 <Headline label={t('projects.headline')} />
-                {window.innerWidth > 1000 && (
-                    <div className={styles.divider}>
-                        <div className={styles.leftLine}></div>
-                        <div className={styles.navigation}>
-                            <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
-                            <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
-                        </div>
-                        <div className={styles.rightLine}></div>
-                    </div>
 
-                )}
+
 
 
                 <div className={styles.projectContainer}>
-                    <div className={styles.projectsBarContainer}>
-                        <div className={styles.projectsBar}>
+                    {/* <div className={styles.projectsBarContainer}> */}
+                        <div className={styles.projectsCards}>
                             {projects.map((project, index) => (
-                                <div onClick={() => openProjectInfos(index)} className={styles.projectBtn} key={index}>
+                                <div onClick={() => openProjectInfos(index)} className={styles.projectCard} key={index}>
                                     <img src={project.imagePath} alt="" />
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    {/* </div> */}
                     {/* <div className={styles.divider}></div> */}
+                    {isOpen && (
+                        <div className={`${styles.projectDetails}`} onClick={() => setisOpen(false)}>
 
-                    <div className={`${styles.projectDetails} ${isOpen ? styles.slideIn : ''}`} onClick={() => setisOpen(false)}>
-                        {window.innerWidth < 1000 && (
                             <img onClick={() => setisOpen(false)} className={styles.closeBtn} src="./icons/close.svg" alt="" />
-                        )}
 
 
-                        <div className={styles.projectsInfoContainer} >
-                            <img src={currentProject.imagePath} alt="" />
-                            <h3>{currentProject.title}</h3>
-                            <p>{currentProject.description}</p>
-                            <div className={styles.duration}>
-                                <p>{t('projects.duration')}</p>
-                                <p>{currentProject.duration}</p>
-                                <p>{t('projects.week')}</p>
-                            </div>
-                            <div className={styles.stack}>
-                                {currentProject.stack.map((stackImage, index) => (
-                                    <div className={styles.stackImage} key={index}>
-                                        <img src={stackImage} alt="" />
-                                    </div>
 
-                                ))}
-                            </div>
-
-                            <div className={styles.projectsBtns}>
-
-                                <div className="btnBack">
-                                    <button onClick={() => window.open(currentProject.link, "_blank")} >Live Test</button>
+                            <div className={styles.projectsInfoContainer} >
+                                <img src={currentProject.imagePath} alt="" />
+                                <h3>{currentProject.title}</h3>
+                                <p>{currentProject.description}</p>
+                                <div className={styles.duration}>
+                                    <p>{t('projects.duration')}</p>
+                                    <p>{currentProject.duration}</p>
+                                    <p>{t('projects.week')}</p>
                                 </div>
-                            </div>
-                            {/* {window.innerWidth <= 1000 && (
-                                <div className={styles.divider}>
-                                    <div className={styles.leftLine}></div>
-                                    <div className={styles.navigation}>
-                                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
-                                        <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
-                                    </div>
-                                    <div className={styles.rightLine}></div>
-                                </div>
-                            )} */}
+                                <div className={styles.stack}>
+                                    {currentProject.stack.map((stackImage, index) => (
+                                        <div className={styles.stackImage} key={index}>
+                                            <img src={stackImage} alt="" />
+                                        </div>
 
+                                    ))}
+                                </div>
+
+                                <div className={styles.projectsBtns}>
+
+                                    <div className="btnBack">
+                                        <button onClick={() => window.open(currentProject.link, "_blank")} >Live Test</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className={styles.divider}>
+                                <div className={styles.leftLine}></div>
+                                <div className={styles.navigation}>
+                                    <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'backward', event)}><img src="./icons/left_arrow.svg" alt="" /></div>
+                                    <div className={styles.slideBtn} onClick={(event) => slideProject(projectIndex, 'forward', event)}><img src="./icons/right_arrow.svg" alt="" /></div>
+                                </div>
+                                <div className={styles.rightLine}></div>
+                            </div>
 
                         </div>
-                    </div>
-
+                    )}
                 </div>
 
 
 
             </div>
             {/* <Divider section="projects" left="166%" /> */}
-              <Divider />
+            <Divider />
         </section>
 
     );

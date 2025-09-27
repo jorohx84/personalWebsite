@@ -14,6 +14,7 @@
     flex-direction: column;
     align-items: center;
     gap: 56px;
+    margin-bottom: 56px;
 }
 
 .skillContainer {
@@ -39,7 +40,7 @@
     // background-color: var(--back);
     // box-shadow: var(--shadow);
     border: solid 1px var(--main);
-    border-radius: 10px;
+    border-radius: 4px;
 
     .cardImage {
         width: 56px;
@@ -65,4 +66,19 @@
 
 .scaleCard {
     transform: scale(1);
+}
+
+
+@media(max-width: 1240px){
+    .skillContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+  
+}
+
+@media(max-width: 780px){
+    .skillContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+  
 }

@@ -6,6 +6,8 @@ import Divider from "../shared/divider";
 const Hero = () => {
     const firstLetters = ['F', 'R', 'O', 'N', 'T', 'E', 'N', 'D'];
     const secondLetters = ['D', 'E', 'V', 'E', 'L', 'O', 'P', 'E', 'R'];
+    //     const firstLetters = ['J', 'O', 'H', 'A', 'N', 'N', 'E', 'S'];
+    // const secondLetters = ['R', 'O', 'T', 'H'];
 
     const { t } = useTranslation('de');
 
@@ -67,6 +69,7 @@ const Hero = () => {
 
                     </div>
                     <img className={styles.portrait} src="./img/portrait2.webp" alt="portraitfoto" />
+                      {/* <img className={styles.portrait} src="./icons/code.svg" alt="portraitfoto" /> */}
                 </div>
                 <div className={styles.divider}>
                     <Divider section="hero" />
